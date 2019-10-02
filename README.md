@@ -21,7 +21,7 @@ lv2. Find the name of the captain
 
 lv3(Emil). Find the mistrese
 
-	-player finds spray painted picture of a girl #holds up phone to picture displays video --> lv4 (Solve riddle)
+-player finds spray painted picture of a girl #holds up phone to picture displays video --> lv4 (Solve riddle)
 
 	
 lv4(Emil). Solve the riddle
@@ -45,26 +45,26 @@ lv6(Emil). Earn money at Juliets place	-->	pay the debt
 	
 
 lv7(Emil). Find the gamblers
-	-Find painting of gamblers
+-Find painting of gamblers
 
 lv8. Gamble	-->	wins the next clue
-	-dice game
+-dice game
 
 lv9(David). Find the gates to hell
-	-Solve the following riddle "_____________"
+-Solve the following riddle "_____________"
 
 lv10. kill an innocent
-	-Game Hangman 	-->	word is location
+-Game Hangman 	-->	word is location
 	
 	
 lv11. find the tressure
-	- the players has recived a map the use it to locate a qr code to scan
+- the players has recived a map the use it to locate a qr code to scan
 
 lv12. Battle the ghost
-	-Find the right word to banish the ghost
+-Find the right word to banish the ghost
 
 	
 lv13. Do something to gain the tressure
-	-
+-
 	
 	
