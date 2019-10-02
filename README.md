@@ -6,6 +6,16 @@
 	-Give option to chose language
 	-instructions how to use AR
 
+Street art
+-Missing person
+https://www.tripadvisor.co.uk/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=353264463
+-Mistress
+https://www.tripadvisor.com/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=375433557
+-Gamblers
+https://www.tripadvisor.com/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=290232005
+or
+https://www.tripadvisor.com/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=380125740
+
  
 lv1(David). Find the name of the ship
 	*"All of the ships are parked in the harbor the ship youre looking for is (blue ship, double decker and white sail)
