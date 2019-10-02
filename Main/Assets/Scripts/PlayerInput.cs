@@ -6,7 +6,7 @@ public class PlayerInput : MonoBehaviour
 {
     private string playerAnswer;
     public GameObject inputField;
-    public GameObject textDisplay;
+    public Text textDisplay;
     private string rightAnswer = "Regalskeppet Vasa";
 
     public void Answer()
@@ -15,13 +15,18 @@ public class PlayerInput : MonoBehaviour
 
         if(playerAnswer == rightAnswer)
         {
-            textDisplay.GetComponent<Text>().text = "You've answered the question correctly!";
+            textDisplay.text = "Correct answer, good job!";
             FindObjectOfType<GameManager>().NextLevel();
         }
 
         else
         {
-            textDisplay.GetComponent<Text>().text = "That's the wrong answer, try again";
+            textDisplay.text = "Wrong answer, try again";
         }
+    }
+
+    private void NextLevel()
+    { 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
