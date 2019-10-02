@@ -13,7 +13,7 @@ https://www.tripadvisor.co.uk/Attraction_Review-g187481-d10538219-Reviews-Puerto
 https://www.tripadvisor.com/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=375433557
 -Gamblers
 https://www.tripadvisor.com/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=290232005
-or
+__OR__
 https://www.tripadvisor.com/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=380125740
 
  
