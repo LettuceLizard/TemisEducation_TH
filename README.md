@@ -63,7 +63,6 @@ lv11. find the tressure
 lv12. Battle the ghost
 	-Find the right word to banish the ghost
 
-	-
 	
 lv13. Do something to gain the tressure
 	-
