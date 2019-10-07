@@ -3,9 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public float nextLevelTimer = 3f;
     public void CompleteLevel()
     {
-        Invoke("NextLevel", 2f);
+        Invoke("NextLevel", nextLevelTimer);
     }
 
     public void NextLevel()

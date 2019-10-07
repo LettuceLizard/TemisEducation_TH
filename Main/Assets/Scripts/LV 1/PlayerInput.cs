@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -23,10 +22,5 @@ public class PlayerInput : MonoBehaviour
         {
             textDisplay.text = "Wrong answer, try again";
         }
-    }
-
-    private void NextLevel()
-    { 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
