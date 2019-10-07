@@ -28,16 +28,10 @@ lv2. Find the name of the captain
 		INVESTEGATE LOCATION --> FIND WEIRD SYMBOLSE --> DECODE THEM --> congratss! 
 			you found out where he met his mistress go there.
 
-
-lv3(Emil). Find the mistrese
-
--player finds spray painted picture of a girl #holds up phone to picture displays video --> lv4 (Solve riddle)
-
 	
-lv4(Emil). Solve the riddle
+lv3/lv4(Emil). Find the mistress and Solve the riddle
 	-Solve the following riddle "___________________________"	--> enter answer:
-		
-		--> tells story about mermaid (story about how she threw a key in the ocean with a bottle)
+		-player finds spray painted picture of a girl #holds up phone to picture displays video
 		--> go to mermaids bay with the map {}
 
 lv5. Find the key to open the chest
@@ -45,22 +39,17 @@ lv5. Find the key to open the chest
 	-->Find the bottle in the ocean 
 
 
-lv6(Emil). Earn money at Juliets place	-->	pay the debt
+lv7(Emil). Earn money at Juliets place	-->	pay the debt
 	-bounty for lost husband find the right guy with camera (explains how he looked you can only chose one of them) https://www.tripadvisor.co.uk/Attraction_Review-g187481-d10538219-Reviews-Puerto_Street_Art-Puerto_de_la_Cruz_Tenerife_Canary_Islands.html#photos;aggregationId=101&albumid=101&filter=7&ff=353264463
 		--> correct earn some money	
 
-	*Minigame
-	
-	
-	
-
-lv7(Emil). Find the gamblers
+lv6(Emil). Find the gamblers
 -Find painting of gamblers
 
 lv8. Gamble	-->	wins the next clue
 -dice game
 
-lv9(David). Find the gates to hell
+lv9(David). go to the castle
 -Solve the following riddle "_____________"
 
 lv10. kill an innocent
