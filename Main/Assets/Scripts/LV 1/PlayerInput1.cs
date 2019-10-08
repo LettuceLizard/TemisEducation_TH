@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerInput1 : MonoBehaviour
 {
     private string playerAnswer;
     public GameObject inputField;
     public Text textDisplay;
-    private string rightAnswer = "Regalskeppet Vasa";
+    private string rightAnswer = "El Ivpiter";
 
     public void Answer()
     {

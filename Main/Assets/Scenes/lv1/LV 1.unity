@@ -597,7 +597,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '*Insert description of the ship players will need to find*'
+  m_text: 'That docked ship looks like one of the four legendary ships with equally
+    legendary captains.
+
+    It is said that they have all buried their treasures somewhere on this island.
+
+    It is also said that the spanish soildiers manning the walls have named four of
+    the cannons after these legendary captains ships.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -666,12 +672,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 590886672}
-    characterCount: 58
+    characterCount: 301
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 50
+    wordCount: 51
     linkCount: 0
-    lineCount: 1
+    lineCount: 7
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1000,10 +1006,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'What is the ship called?
+  m_text: 'If you want to find their treasure you''ll have to see if you can figure
+    out the name of the ship using the cannons.
 
 
-    Answer: Regalskeppet Vasa'
+    Answer: El Ivpiter'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1072,12 +1079,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 775215402}
-    characterCount: 51
+    characterCount: 135
     spriteCount: 0
-    spaceCount: 8
-    wordCount: 8
+    spaceCount: 27
+    wordCount: 27
     linkCount: 0
-    lineCount: 3
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
