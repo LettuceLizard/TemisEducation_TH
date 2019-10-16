@@ -3,21 +3,21 @@ using UnityEngine.Video;
 
 public class Videoplayer : MonoBehaviour
 {
-    /*
-    private VideoPlayer Video;
-    public Text Target;
+    public VideoPlayer Video;
+    public GameObject Object;
+
+    bool yeet = false;
     void Start()
     {
-        Video = GetComponent<VideoPlayer>();
+        
         Video.enabled = false;
     }
 
     void Update()
     {
-        if (Target == true)
+        if (yeet == true)
         {
             Video.enabled = true;        
         }
     }
-    */
 }
