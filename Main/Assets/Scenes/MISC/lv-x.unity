@@ -721,6 +721,10 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1711325681, guid: a134376639f85ef4780a369687169f12, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a134376639f85ef4780a369687169f12, type: 3}
 --- !u!224 &1626424892 stripped
@@ -763,7 +767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62.2, y: -130.5}
+  m_AnchoredPosition: {x: -410, y: 801}
   m_SizeDelta: {x: 736.9, y: 977.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711325682
@@ -797,7 +801,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2
+  m_Text: X
 --- !u!222 &1711325683
 CanvasRenderer:
   m_ObjectHideFlags: 0
