@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.Video;
-using Vuforia;
 
 public class Videoplayer : MonoBehaviour
 {
+    /*
     private VideoPlayer Video;
-    public ImageTargetBehaviour Target;
+    public Text Target;
     void Start()
     {
         Video = GetComponent<VideoPlayer>();
@@ -19,4 +19,5 @@ public class Videoplayer : MonoBehaviour
             Video.enabled = true;        
         }
     }
+    */
 }
