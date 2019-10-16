@@ -284,7 +284,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948906923}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 947a06de4f7751542b9e498328770e0b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 4d7f9898e5b423443a22fd2010ef5b9a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 288691206}
@@ -300,7 +300,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 0.05
+  - 0.5
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -557,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 2481024549430912881, guid: 16397bb64ab1db446bbd74241c96df9b,
         type: 3}
       propertyPath: nextLevelTimer
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16397bb64ab1db446bbd74241c96df9b, type: 3}
