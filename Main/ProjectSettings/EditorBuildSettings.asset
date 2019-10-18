@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/__DELETED_GUID_Trash/cf0c9f8bfa8f2074d8008a92631abbcf
     guid: cf0c9f8bfa8f2074d8008a92631abbcf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/lv7/LV 7.1.unity
     guid: a8df11c586f09744ebf3b461a66ed49c
   - enabled: 1
