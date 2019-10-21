@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
-
+using UnityEngine.UI;
 public class cool : MonoBehaviour
 {
-    public GameObject panel;
-
-    panel.enabled = false;
+    public GameObject Panel;
+    public void hidePanel()
+    {
+        Panel.gameObject.SetActive(false);
+    }
 }
