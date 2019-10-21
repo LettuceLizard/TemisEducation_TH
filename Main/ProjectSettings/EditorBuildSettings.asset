@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/lv7/7.2.unity
     guid: a1450c70043db3b4abf8711770ab989e
   - enabled: 1
+    path: Assets/Hangman Experiment/ExperimentalHangman.unity
+    guid: 8904b29251721fd4497fc48579afdcd5
+  - enabled: 1
     path: Assets/Scenes/lv9/LV 9.unity
     guid: 4b04a9152d03d3f4b932497e232916a5
   - enabled: 1
