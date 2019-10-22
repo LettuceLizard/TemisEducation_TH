@@ -368,6 +368,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2481024549430912881, guid: 16397bb64ab1db446bbd74241c96df9b,
+        type: 3}
+      propertyPath: nextLevelTimer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16397bb64ab1db446bbd74241c96df9b, type: 3}
 --- !u!1 &1110889569
@@ -587,8 +592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "hj\xE4lpgubben ber\xE4ttar att man ska till registret och hitta piratens
-    namn"
+  m_Text: 'Intro '
 --- !u!222 &1360075964
 CanvasRenderer:
   m_ObjectHideFlags: 0
