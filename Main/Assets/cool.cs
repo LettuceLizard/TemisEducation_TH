@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 public class cool : MonoBehaviour
 {
     public GameObject Panel;
