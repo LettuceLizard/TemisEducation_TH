@@ -576,18 +576,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 259
+    m_FontSize: 66
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 259
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "R\xE4tt snubbe! g\xE5 till mermaids bay"
+  m_Text: "Du skannade r\xE4tt fruntimmer! g\xE5 till mermaids bay"
 --- !u!222 &1548792287
 CanvasRenderer:
   m_ObjectHideFlags: 0
