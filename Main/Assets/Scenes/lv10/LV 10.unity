@@ -7890,7 +7890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Empty
+  m_Text: Hangman
 --- !u!222 &2051730072
 CanvasRenderer:
   m_ObjectHideFlags: 0
