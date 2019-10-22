@@ -587,7 +587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "video/snubbe som ber\xE4ttar om vart man ska "
+  m_Text: "fiskebruden talar om riktningen till n\xE4sta brud"
 --- !u!222 &1360075964
 CanvasRenderer:
   m_ObjectHideFlags: 0
