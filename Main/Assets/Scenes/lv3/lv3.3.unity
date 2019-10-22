@@ -587,7 +587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: cool
+  m_Text: "R\xE4tt snubbe! g\xE5 till mermaids bay"
 --- !u!222 &1548792287
 CanvasRenderer:
   m_ObjectHideFlags: 0
