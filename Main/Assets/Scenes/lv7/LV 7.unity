@@ -535,7 +535,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Find bust at current v\xE4garbete, add description later\n\nbad target???"
+  m_Text: "Find bust at current v\xE4garbete, add description later"
 --- !u!222 &867127751
 CanvasRenderer:
   m_ObjectHideFlags: 0
