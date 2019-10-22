@@ -9,29 +9,59 @@ EditorBuildSettings:
     path: Assets/Scenes/MISC/Menu.unity
     guid: e75a9560ee800474cb15597325239347
   - enabled: 1
+    path: Assets/Scenes/lv1/LV 1.unity
+    guid: 27c214f4c99bc9c498815cfc15400d4f
+  - enabled: 1
+    path: Assets/Scenes/lv1/lv1_Helper.unity
+    guid: 20e5649d34a497d4e8dc1b71a37b2615
+  - enabled: 1
     path: Assets/Scenes/lv2/lv2.1.unity
     guid: bdd0902d06ba4b54aac89544cbdb8cd2
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/8e5352097f3e4a54da56936082a98c64
-    guid: 8e5352097f3e4a54da56936082a98c64
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/3680d4a5de5b2194a960a4b011b8d5ab
-    guid: 3680d4a5de5b2194a960a4b011b8d5ab
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/3a34aaebc740d134e8b76b431803fb0f
-    guid: 3a34aaebc740d134e8b76b431803fb0f
-  - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/cf0c9f8bfa8f2074d8008a92631abbcf
-    guid: cf0c9f8bfa8f2074d8008a92631abbcf
-  - enabled: 0
-    path: Assets/Scenes/lv7/LV 7.1.unity
-    guid: a8df11c586f09744ebf3b461a66ed49c
   - enabled: 1
-    path: Assets/Scenes/lv7/7.2.unity
-    guid: a1450c70043db3b4abf8711770ab989e
+    path: Assets/Scenes/lv2/lv2.2.unity
+    guid: c660e654eb8f4c94684303b3a5e3e066
   - enabled: 1
-    path: Assets/Hangman Experiment/ExperimentalHangman.unity
-    guid: 8904b29251721fd4497fc48579afdcd5
+    path: Assets/Scenes/MISC/lv-x.unity
+    guid: 727990821414b494d8c9951dbc022d2a
+  - enabled: 1
+    path: Assets/Scenes/lv3/lv3.1.unity
+    guid: 33c69529e13b7f74689aa25d8f433723
+  - enabled: 1
+    path: Assets/Scenes/lv3/lv3.2.unity
+    guid: f445a80f23df05d4abc5cc4a91a32cb2
+  - enabled: 1
+    path: Assets/Scenes/lv3/lv3.3.unity
+    guid: 239d8aea7b5a02c459029b5c021162a0
+  - enabled: 1
+    path: Assets/Scenes/lv4/lv4.unity
+    guid: 59babdcfe38f2494dbac6ba80f942b3c
+  - enabled: 1
+    path: Assets/Scenes/lv4/lv4_Helper.unity
+    guid: ec0b703650a1d5a4ab86704018f14f5d
+  - enabled: 1
+    path: Assets/Scenes/lv5/lv5.unity
+    guid: f3216b16043c8c649aa413b1ef429950
+  - enabled: 1
+    path: Assets/Scenes/lv5/lv5_Helper.unity
+    guid: 02a273706918acd4faf71453efcc5e9a
+  - enabled: 1
+    path: Assets/Scenes/lv6/lv6.unity
+    guid: f97d3a68b90f17948b749393aa427bf7
+  - enabled: 1
+    path: Assets/Scenes/lv6/lv6_storybounty.unity
+    guid: c74f490510e8ef64aae70eeb48dd8ba0
+  - enabled: 1
+    path: Assets/Scenes/lv7/LV 7.unity
+    guid: 38db875d2d9ebe148ac8526d697f3572
+  - enabled: 1
+    path: Assets/Scenes/lv7/LV 7_help, correct answer.unity
+    guid: 489bc5376cfdb7b4993adf2543f751bf
+  - enabled: 1
+    path: Assets/Scenes/lv7/LV 7_help, pirate.unity
+    guid: a7e423010c677ed46b12c9c6a1346f2a
+  - enabled: 1
+    path: Assets/Scenes/lv8/LV 8.unity
+    guid: 041e81b32a4141c458a95141a50e5467
   - enabled: 1
     path: Assets/Scenes/lv9/LV 9.unity
     guid: 4b04a9152d03d3f4b932497e232916a5
@@ -44,4 +74,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lv11/LV 11,5.unity
     guid: 3c5a9b73abd4e13478867badbf747fbf
+  - enabled: 1
+    path: Assets/Scenes/lv11/lv11.unity
+    guid: 5879177d64401094293c371ec9450e59
+  - enabled: 1
+    path: Assets/Scenes/MISC/map.unity
+    guid: ce775c6092ce49442b791ab76933fd74
   m_configObjects: {}
