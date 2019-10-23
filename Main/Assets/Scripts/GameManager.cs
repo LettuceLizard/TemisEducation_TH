@@ -21,14 +21,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
         Debug.Log("hello");
     }
-
-      public void hidePanel()
-    {
-        Panel.gameObject.SetActive(false);
-    }
-
-      public void showPanel()
-    {
-        Panel.gameObject.SetActive(true);
-    }
 }
