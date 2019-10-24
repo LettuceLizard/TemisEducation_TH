@@ -28,10 +28,10 @@ public class GameManager : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().name;    
         SceneManager.LoadScene("map");
     }
-
+    /*
     public void Map()
     {
-        int n = i++;
+        i++;
         Debug.Log("i = " + i);
         Debug.Log("n = " + n);
         string previousScene = currentScene;
@@ -55,4 +55,5 @@ public class GameManager : MonoBehaviour
             Debug.Log(previousScene + " Hello");
         }
     }
+    */
 }
