@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MISC/intro.unity
     guid: 8192692fa4f8a9a469db7e009a233c7e
   - enabled: 1
-    path: Assets/Scenes/lv1/LV 1.unity
+    path: Assets/Scenes/lv1/LV_1.unity
     guid: 27c214f4c99bc9c498815cfc15400d4f
   - enabled: 1
     path: Assets/Scenes/lv1/lv1_Helper.unity
