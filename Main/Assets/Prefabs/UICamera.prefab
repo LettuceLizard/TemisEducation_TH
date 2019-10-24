@@ -528,8 +528,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2481024549430912881, guid: 16397bb64ab1db446bbd74241c96df9b,
-          type: 3}
+      - m_Target: {fileID: 1200013440256220692}
         m_MethodName: Back
         m_Mode: 1
         m_Arguments:
@@ -814,18 +813,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1200013440256220692}
-        m_MethodName: SaveScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1200013440256220692}
-        m_MethodName: ShowMap
+        m_MethodName: Map
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1129,8 +1117,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2481024549430912881, guid: 16397bb64ab1db446bbd74241c96df9b,
-          type: 3}
+      - m_Target: {fileID: 1200013440256220692}
         m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:

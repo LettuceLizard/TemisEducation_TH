@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
+    string currentScene;
+    int i = 1;
     public float nextLevelTimer = 3;
 
     public void CompleteLevel()
@@ -20,23 +23,36 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
-    public void SaveScene()
-    {
-        string currentScene = SceneManager.GetActiveScene().name;
-        Debug.Log("hello");
-    }
-
     public void ShowMap()
-    {       
+    {   
+        currentScene = SceneManager.GetActiveScene().name;    
         SceneManager.LoadScene("map");
     }
-    
-    public void HAHAHAHA()
+
+    public void Map()
     {
-        Invoke("HideMap", 0f);
-    }
-    public void HideMap(string loadThis = "currentScene")
-    {
-        SceneManager.LoadScene(loadThis);
+        int n = i++;
+        Debug.Log("i = " + i);
+        Debug.Log("n = " + n);
+        string previousScene = currentScene;
+        currentScene = SceneManager.GetActiveScene().name;
+        
+        if (i == 3)
+        {
+            SceneManager.LoadScene(previousScene);
+            Debug.Log(previousScene + " How are you?");   
+        }
+
+        if (currentScene != "map")
+        {
+            SceneManager.LoadScene("map");
+            Debug.Log(currentScene + " Goodbye");
+        }
+        
+        if (currentScene == "map" && i != 3)
+        {
+            SceneManager.LoadScene(previousScene);
+            Debug.Log(previousScene + " Hello");
+        }
     }
 }
