@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     string currentScene;
     int i = 1;
-    public float nextLevelTimer = 3;
+    public float nextLevelTimer = 15f;
 
     public void CompleteLevel()
     {
