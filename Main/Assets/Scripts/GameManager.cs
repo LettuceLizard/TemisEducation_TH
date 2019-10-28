@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
     int i = 1;
     public float nextLevelTimer = 15f;
 
+    public void ContinueGame()
+    {
+        int load = PlayerPrefs.GetInt("savedLevel");
+        SceneManager.LoadScene(load);
+    }
+
     public void CompleteLevel()
     {
         Invoke("NextLevel", nextLevelTimer);
@@ -15,11 +21,13 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Back()
     {
+        PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex - 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
