@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void Back()
     {
         PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex - 1);
