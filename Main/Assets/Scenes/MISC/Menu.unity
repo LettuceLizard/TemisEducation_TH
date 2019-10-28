@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -269,6 +269,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52005b25791146745ac91432f3a7979e, type: 3}
+--- !u!4 &160223790 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 160223789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &384635575
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,11 +380,11 @@ RectTransform:
   - {fileID: 937504116}
   - {fileID: 1702395966}
   m_Father: {fileID: 1896897139}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.5643e-10}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 2539.5, y: 2604.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386915591
@@ -496,7 +501,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1557391240}
+  - {fileID: 160223790}
   m_Father: {fileID: 1896897139}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -924,7 +929,7 @@ RectTransform:
   - {fileID: 1599180662}
   - {fileID: 1745001440}
   m_Father: {fileID: 1896897139}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1077,12 +1082,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439849669}
   m_CullTransparentMesh: 0
---- !u!224 &1557391240 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 22434992, guid: 52005b25791146745ac91432f3a7979e,
-    type: 3}
-  m_PrefabInstance: {fileID: 160223789}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1599180661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1593,8 +1592,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 889974245}
-  - {fileID: 386915590}
   - {fileID: 1339821571}
+  - {fileID: 386915590}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

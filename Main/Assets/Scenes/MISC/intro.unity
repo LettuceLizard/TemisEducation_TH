@@ -618,8 +618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 700}
-  m_SizeDelta: {x: 273.3, y: 128.4}
+  m_AnchoredPosition: {x: -0.0024872, y: 283.67}
+  m_SizeDelta: {x: 1080, y: 1352.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360075963
 MonoBehaviour:
@@ -641,18 +641,31 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 90
+    m_FontSize: 44
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 90
-    m_Alignment: 4
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Intro '
+  m_Text: "It is 1721 in the year of our lord and the ports in the Canary islands
+    are thriving. We are in what later will be known as the \u201CAge of Piracy\u201D
+    and the vast ocean is still unconquered territory.\r\nEuropeans powers such as
+    Spain or Britain are waging war on each other with the use of pirates, and so
+    the Oceans have become hostile places full of constant danger.\r\nOne of the main
+    stages in the world of piracy is the Canary Islands, with its strategic location,
+    ships on route both to the west Indies and to Asia have made it a favored stop.\r\nIt
+    also belongs to the Kingdom of Castille, and pirates working with Britain of the
+    Netherlands seek to weaken this kingdom.\r\nIn the morning of the INSERT DATE
+    \ 1721, the streets of Puerto de la Cruz are hit with a rumour that a pirate,
+    under a different name and flag has been staying of the last week in Tenerife,
+    and that a certain famous ship is waiting for him outside the port.\r\nWhat is
+    a pirate doing in Puerto de la Cruz that long? And who is it? Could the rumours
+    of treasure and riches be true?rt"
 --- !u!222 &1360075964
 CanvasRenderer:
   m_ObjectHideFlags: 0
