@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311912, g: 0.3807398, b: 0.3587271, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -539,7 +539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1304153439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1320,16 +1320,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1531057680360619843, guid: 16397bb64ab1db446bbd74241c96df9b,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2481024549430912881, guid: 16397bb64ab1db446bbd74241c96df9b,
-        type: 3}
-      propertyPath: nextLevelTimer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1531057680360619842, guid: 16397bb64ab1db446bbd74241c96df9b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1383,6 +1373,16 @@ PrefabInstance:
     - target: {fileID: 1531057680360619842, guid: 16397bb64ab1db446bbd74241c96df9b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1531057680360619843, guid: 16397bb64ab1db446bbd74241c96df9b,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481024549430912881, guid: 16397bb64ab1db446bbd74241c96df9b,
+        type: 3}
+      propertyPath: nextLevelTimer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
