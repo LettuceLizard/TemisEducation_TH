@@ -3,21 +3,16 @@ using UnityEngine.Video;
 
 public class Videoplayer : MonoBehaviour
 {
-    public VideoPlayer Video;
-    public GameObject Object;
+    public VideoPlayer video;
+    public float length = 3f;
 
-    bool yeet = false;
     void Start()
     {
-        
-        Video.enabled = false;
+        Invoke("NextScene",length);
     }
 
-    void Update()
+    private void NextScene()
     {
-        if (yeet == true)
-        {
-            Video.enabled = true;        
-        }
+        FindObjectOfType<GameManager>().NextLevel();
     }
 }
