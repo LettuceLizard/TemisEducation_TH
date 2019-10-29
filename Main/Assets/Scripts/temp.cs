@@ -38,7 +38,7 @@ public class temp : MonoBehaviour, ITrackableEventHandler {
 	void OnGUI() {
 		if (mShowGUIButton == true) {
             video.enabled = true;
-            FindObjectOfType<GameManager>().CompleteLevel();
+            FindObjectOfType<GameManager>().NextLevel();
 			// draw the GUI button
 			if (GUI.Button(mButtonRect, "Hello")) {
 				Debug.Log("Hello!");
