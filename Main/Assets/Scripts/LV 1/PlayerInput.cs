@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerInput1 : MonoBehaviour
+public class PlayerInput : MonoBehaviour
 {
     private string playerAnswer;
     public GameObject inputField;
     public Text textDisplay;
-    private string rightAnswer = "El Ivpiter";
 
-    public void Answer()
+    public void Answer(string rightAnswer)
     {
         playerAnswer = inputField.GetComponent<Text>().text;
 
