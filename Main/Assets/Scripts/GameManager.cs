@@ -28,10 +28,4 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex - 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
-
-    public void ShowMap()
-    {   
-        currentScene = SceneManager.GetActiveScene().name;    
-        SceneManager.LoadScene("map");
-    }
 }
