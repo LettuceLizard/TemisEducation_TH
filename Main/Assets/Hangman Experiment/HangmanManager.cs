@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HangmanManager : MonoBehaviour
 {
     public GameObject letter;
-    public GameObject cen;
+    private GameObject cen;
     private string wordToGuess = "";
     private int lengthOfWordToGuess;
     char [] lettersToGuess;
@@ -17,11 +17,6 @@ public class HangmanManager : MonoBehaviour
         initLetters ();
     }
 
-    void Update()
-    {
-        checkKeyboard ();
-    }
-
     void initLetters()
     {
         int nbletters = lengthOfWordToGuess;
@@ -29,7 +24,7 @@ public class HangmanManager : MonoBehaviour
         for (int i = 0; i < nbletters; i++) 
         {
             Vector3 newPosition;
-            newPosition = new Vector3 (cen.transform.position.x + ((i-nbletters/2.0f) *100), cen.transform.position.y, cen.transform.position.z);
+            newPosition = new Vector3 (cen.transform.position.x + (50+((i-nbletters/2.0f) *100)), cen.transform.position.y, cen.transform.position.z);
             GameObject l = (GameObject)Instantiate (letter, newPosition, Quaternion.identity);
             l.name = "letter" + (i + 1);
             l.transform.SetParent(GameObject.Find ("Canvas").transform);
@@ -38,32 +33,31 @@ public class HangmanManager : MonoBehaviour
 
     void initGame()
     {
-        wordToGuess = "Elephant";
+        wordToGuess = "Treasure";
         lengthOfWordToGuess = wordToGuess.Length;
         wordToGuess = wordToGuess.ToUpper ();
-        lettersToGuess = new char[lengthOfWordToGuess];
+        lettersToGuess = new char [lengthOfWordToGuess];
         lettersGuessed = new bool [lengthOfWordToGuess];
         lettersToGuess = wordToGuess.ToCharArray ();
     }
 
-    void checkKeyboard()
+    public void Input(int letterPressedAsInt)
     {
-        if (Input.anyKeyDown)
-        {
-            char letterPressed = Input.inputString.ToCharArray () [0];
-            int letterPressedAsInt = System.Convert.ToInt32 (letterPressed);
-            if (letterPressedAsInt >= 97 && letterPressed <= 122)
+        PlayerPrefs.SetInt("buttonIndex", letterPressedAsInt);
+        char letterPressed = System.Convert.ToChar (letterPressedAsInt);
+        FindObjectOfType<ButtonHiding>().HideButton();
+       if (letterPressedAsInt >= 97 && letterPressed <= 122)
+       {
+            for (int i=0; i < lengthOfWordToGuess; i++)
             {
-                for (int i=0; i < lengthOfWordToGuess; i++)
+                if (!lettersGuessed [i])
                 {
-                    if (!lettersGuessed [i])
+                    letterPressed = System.Char.ToUpper (letterPressed);
+        
+                    if (lettersToGuess [i] == letterPressed)
                     {
-                        letterPressed = System.Char.ToUpper (letterPressed);
-                        if (lettersToGuess [i] == letterPressed)
-                        {
-                            lettersGuessed [i] = true;
-                            GameObject.Find("letter"+(i+1)).GetComponent<Text>().text = letterPressed.ToString();
-                        }
+                        lettersGuessed [i] = true;
+                        GameObject.Find("letter"+(i+1)).GetComponent<Text>().text = letterPressed.ToString();
                     }
                 }
             }
