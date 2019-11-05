@@ -5,6 +5,7 @@ public class HangmanManager : MonoBehaviour
 {
     public GameObject letter;
     private GameObject cen;
+    public GameObject head;
     private string wordToGuess = "";
     private int lengthOfWordToGuess;
     char [] lettersToGuess;
@@ -41,13 +42,31 @@ public class HangmanManager : MonoBehaviour
         lettersToGuess = wordToGuess.ToCharArray ();
     }
 
+    char T = System.Convert.ToChar("T");
+    char R = System.Convert.ToChar("R");
+    char E = System.Convert.ToChar("E");
+    char A = System.Convert.ToChar("A");
+    char S = System.Convert.ToChar("S");
+    char U = System.Convert.ToChar("U");
+    int n = 0;
+    private GameObject obj;
+    string objName;
     public void Input(int letterPressedAsInt)
     {
         PlayerPrefs.SetInt("buttonIndex", letterPressedAsInt);
-        char letterPressed = System.Convert.ToChar (letterPressedAsInt);
+        char letterPressed = System.Convert.ToChar(letterPressedAsInt);
         FindObjectOfType<ButtonHiding>().HideButton();
-       if (letterPressedAsInt >= 97 && letterPressed <= 122)
-       {
+
+        if (letterPressedAsInt >= 97 && letterPressed <= 122)
+        {
+            if (letterPressedAsInt != 116 && letterPressedAsInt != 114 && letterPressedAsInt != 101 && letterPressedAsInt != 97 && letterPressedAsInt != 115 && letterPressedAsInt != 117)
+            {
+                objName = "Hangman" + n;
+                obj = GameObject.Find(objName);
+                obj.SetActive(false);
+                n++;
+            }
+            
             for (int i=0; i < lengthOfWordToGuess; i++)
             {
                 if (!lettersGuessed [i])

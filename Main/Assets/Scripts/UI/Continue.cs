@@ -7,14 +7,11 @@ public class Continue : MonoBehaviour
 
     void Start()
     {
-        int load = PlayerPrefs.GetInt("savedLevel");
-        if (load >= 1)
+        if (PlayerPrefs.GetInt("savedLevel") >= 1)
         {
             panel.gameObject.SetActive(false);
             panel2.gameObject.SetActive(true);
-            Debug.Log("it should work");
         }
-        Debug.Log("But this works??");
     }
 
     public void ResetSave()
