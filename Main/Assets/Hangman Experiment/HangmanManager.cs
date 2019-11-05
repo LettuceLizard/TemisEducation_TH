@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HangmanManager : MonoBehaviour
 {
     public GameObject letter;
     private GameObject cen;
-    public GameObject head;
     private string wordToGuess = "";
     private int lengthOfWordToGuess;
     char [] lettersToGuess;
@@ -28,7 +28,7 @@ public class HangmanManager : MonoBehaviour
             newPosition = new Vector3 (cen.transform.position.x + (50+((i-nbletters/2.0f) *100)), cen.transform.position.y, cen.transform.position.z);
             GameObject l = (GameObject)Instantiate (letter, newPosition, Quaternion.identity);
             l.name = "letter" + (i + 1);
-            l.transform.SetParent(GameObject.Find ("Canvas").transform);
+            l.transform.SetParent(GameObject.Find ("word").transform);
         }
     }
 
@@ -42,15 +42,14 @@ public class HangmanManager : MonoBehaviour
         lettersToGuess = wordToGuess.ToCharArray ();
     }
 
-    char T = System.Convert.ToChar("T");
-    char R = System.Convert.ToChar("R");
-    char E = System.Convert.ToChar("E");
-    char A = System.Convert.ToChar("A");
-    char S = System.Convert.ToChar("S");
-    char U = System.Convert.ToChar("U");
     int n = 0;
+    int j = 0;
     private GameObject obj;
     string objName;
+    public GameObject keys;
+    public GameObject gameOver;
+    public GameObject gameWon;
+
     public void Input(int letterPressedAsInt)
     {
         PlayerPrefs.SetInt("buttonIndex", letterPressedAsInt);
@@ -66,6 +65,13 @@ public class HangmanManager : MonoBehaviour
                 obj.SetActive(false);
                 n++;
             }
+
+            if (n >= 11)
+            {
+                keys.SetActive(false);
+                gameOver.SetActive(true);
+                Invoke("ReloadScene", 3f);
+            }
             
             for (int i=0; i < lengthOfWordToGuess; i++)
             {
@@ -77,9 +83,26 @@ public class HangmanManager : MonoBehaviour
                     {
                         lettersGuessed [i] = true;
                         GameObject.Find("letter"+(i+1)).GetComponent<Text>().text = letterPressed.ToString();
+                        j++;
+                    }
+
+                    if (j >= 8)
+                    {
+                        gameWon.SetActive(true);
+                        Invoke("NextLevel", 3f);
                     }
                 }
             }
         }
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    void NextLevel()
+    {
+        FindObjectOfType<GameManager>().NextLevel();
     }
 }
