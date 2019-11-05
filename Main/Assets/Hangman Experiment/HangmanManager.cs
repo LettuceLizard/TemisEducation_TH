@@ -47,6 +47,7 @@ public class HangmanManager : MonoBehaviour
     private GameObject obj;
     string objName;
     public GameObject keys;
+    public GameObject word;
     public GameObject gameOver;
     public GameObject gameWon;
 
@@ -70,6 +71,7 @@ public class HangmanManager : MonoBehaviour
             {
                 keys.SetActive(false);
                 gameOver.SetActive(true);
+                word.SetActive(false);
                 Invoke("ReloadScene", 3f);
             }
             
@@ -89,6 +91,7 @@ public class HangmanManager : MonoBehaviour
                     if (j >= 8)
                     {
                         gameWon.SetActive(true);
+                        word.SetActive(false);
                         Invoke("NextLevel", 3f);
                     }
                 }
