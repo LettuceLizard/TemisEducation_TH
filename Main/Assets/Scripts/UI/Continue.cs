@@ -2,15 +2,15 @@
 using UnityEngine.SceneManagement;
 public class Continue : MonoBehaviour
 {
-    public GameObject panel;
-    public GameObject panel2;
+    public GameObject start;
+    public GameObject cont;
 
     void Start()
     {
         if (PlayerPrefs.GetInt("savedLevel") >= 1)
         {
-            panel.gameObject.SetActive(false);
-            panel2.gameObject.SetActive(true);
+            start.gameObject.SetActive(false);
+            cont.gameObject.SetActive(true);
         }
     }
 

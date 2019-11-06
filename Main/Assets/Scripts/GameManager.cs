@@ -22,6 +22,11 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void Back()
     {
         PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex - 1);

@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class HangmanManager : MonoBehaviour
 {
@@ -101,7 +100,7 @@ public class HangmanManager : MonoBehaviour
 
     void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        FindObjectOfType<GameManager>().ReloadScene();
     }
 
     void NextLevel()
