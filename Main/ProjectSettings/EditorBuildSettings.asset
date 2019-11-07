@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/lv3/lv3.3.unity
     guid: 239d8aea7b5a02c459029b5c021162a0
   - enabled: 1
-    path: Assets/Scenes/lv4/lv4.unity
+    path: Assets/Scenes/lv4/lv4 mermaid method not decided.unity
     guid: 59babdcfe38f2494dbac6ba80f942b3c
   - enabled: 1
     path: Assets/Scenes/lv4/lv4_Helper.unity

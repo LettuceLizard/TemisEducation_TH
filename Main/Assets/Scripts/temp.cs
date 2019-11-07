@@ -9,6 +9,8 @@ public class temp : MonoBehaviour, ITrackableEventHandler {
 	
     public VideoPlayer video;
 	private bool mShowGUIButton = false;
+
+    public float timer = 2f;
 	private Rect mButtonRect = new Rect(50,50,120,60);
 	
 	void Start () {
@@ -36,11 +38,16 @@ public class temp : MonoBehaviour, ITrackableEventHandler {
 		if (mShowGUIButton == true) 
         {
             video.enabled = true;
-            FindObjectOfType<GameManager>().NextLevel();
+            Invoke("NextLevelTimer", timer);
 			// draw the GUI button
 			if (GUI.Button(mButtonRect, "Hello")) {
 				Debug.Log("Hello!");
 			}
 		}
 	}
+
+    void NextLevelTimer()
+    {
+        FindObjectOfType<GameManager>().NextLevel();
+    }
 }
