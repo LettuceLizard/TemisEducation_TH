@@ -4,7 +4,7 @@ using UnityEngine.Video;
 public class Videoplayer : MonoBehaviour
 {
     public VideoPlayer video;
-    public float length = 3f;
+    public float length = 10f;
 
     void Start()
     {
