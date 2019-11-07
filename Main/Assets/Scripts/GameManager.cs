@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
 
 public class GameManager : MonoBehaviour
 {
-    string currentScene;
+    public GameObject back;
+    void Start()
+    {
+        int n = PlayerPrefs.GetInt("backCounter");
+        if (n == 1)
+        {
+            back.SetActive(false);
+        }
+    }
 
     public void ContinueGame()
     {
@@ -16,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerPrefs.SetInt("backCounter", 0);
     }
 
     public void QuitGame()
@@ -23,9 +31,21 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void Back()
     {
-        PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex - 1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        int n = PlayerPrefs.GetInt("backCounter");
+                
+        if (n == 0)
+        {
+            PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex - 1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        }
+
+        PlayerPrefs.SetInt("backCounter", 1);
     }
 }

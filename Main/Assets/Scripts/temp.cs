@@ -20,12 +20,9 @@ public class temp : MonoBehaviour, ITrackableEventHandler {
         video.enabled = false;
 	}
 	
-	public void OnTrackableStateChanged(
-                                    TrackableBehaviour.Status previousStatus,
-                                    TrackableBehaviour.Status newStatus)
+	public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
-        if (newStatus == TrackableBehaviour.Status.DETECTED ||
-            newStatus == TrackableBehaviour.Status.TRACKED)
+        if (newStatus == TrackableBehaviour.Status.DETECTED || newStatus == TrackableBehaviour.Status.TRACKED)
         {
             mShowGUIButton = true;
         }
@@ -36,7 +33,8 @@ public class temp : MonoBehaviour, ITrackableEventHandler {
     }
 	
 	void OnGUI() {
-		if (mShowGUIButton == true) {
+		if (mShowGUIButton == true) 
+        {
             video.enabled = true;
             FindObjectOfType<GameManager>().NextLevel();
 			// draw the GUI button

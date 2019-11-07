@@ -27,7 +27,7 @@ public class HangmanManager : MonoBehaviour
             newPosition = new Vector3 (cen.transform.position.x + (50+((i-nbletters/2.0f) *100)), cen.transform.position.y, cen.transform.position.z);
             GameObject l = (GameObject)Instantiate (letter, newPosition, Quaternion.identity);
             l.name = "letter" + (i + 1);
-            l.transform.SetParent(GameObject.Find ("Canvas").transform);
+            l.transform.SetParent(GameObject.Find ("word").transform);
         }
     }
 
@@ -41,13 +41,39 @@ public class HangmanManager : MonoBehaviour
         lettersToGuess = wordToGuess.ToCharArray ();
     }
 
+    int n = 0;
+    int j = 0;
+    private GameObject obj;
+    string objName;
+    public GameObject keys;
+    public GameObject word;
+    public GameObject gameOver;
+    public GameObject gameWon;
+
     public void Input(int letterPressedAsInt)
     {
         PlayerPrefs.SetInt("buttonIndex", letterPressedAsInt);
-        char letterPressed = System.Convert.ToChar (letterPressedAsInt);
+        char letterPressed = System.Convert.ToChar(letterPressedAsInt);
         FindObjectOfType<ButtonHiding>().HideButton();
-       if (letterPressedAsInt >= 97 && letterPressed <= 122)
-       {
+
+        if (letterPressedAsInt >= 97 && letterPressed <= 122)
+        {
+            if (letterPressedAsInt != 116 && letterPressedAsInt != 114 && letterPressedAsInt != 101 && letterPressedAsInt != 97 && letterPressedAsInt != 115 && letterPressedAsInt != 117)
+            {
+                objName = "Hangman" + n;
+                obj = GameObject.Find(objName);
+                obj.SetActive(false);
+                n++;
+            }
+
+            if (n >= 11)
+            {
+                keys.SetActive(false);
+                gameOver.SetActive(true);
+                word.SetActive(false);
+                Invoke("ReloadScene", 3f);
+            }
+            
             for (int i=0; i < lengthOfWordToGuess; i++)
             {
                 if (!lettersGuessed [i])
@@ -58,9 +84,27 @@ public class HangmanManager : MonoBehaviour
                     {
                         lettersGuessed [i] = true;
                         GameObject.Find("letter"+(i+1)).GetComponent<Text>().text = letterPressed.ToString();
+                        j++;
+                    }
+
+                    if (j >= 8)
+                    {
+                        gameWon.SetActive(true);
+                        word.SetActive(false);
+                        Invoke("NextLevel", 3f);
                     }
                 }
             }
         }
+    }
+
+    void ReloadScene()
+    {
+        FindObjectOfType<GameManager>().ReloadScene();
+    }
+
+    void NextLevel()
+    {
+        FindObjectOfType<GameManager>().NextLevel();
     }
 }
