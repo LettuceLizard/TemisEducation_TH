@@ -80,7 +80,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lv11/LV 11.unity
     guid: f3cca78284aea984d93210a1e565dbd0
-  - enabled: 1
-    path: Assets/Scenes/MISC/map.unity
-    guid: ce775c6092ce49442b791ab76933fd74
   m_configObjects: {}
