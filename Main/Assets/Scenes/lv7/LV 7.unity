@@ -318,6 +318,21 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6147126889879296697, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -361
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147126889879296697, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 914.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 9116385028258741951, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -360.98
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ccd8f996c8925f4aaacfe53c40be141, type: 3}
 --- !u!1 &258013415
@@ -791,6 +806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   video: {fileID: 1963730425}
+  timer: 2
 --- !u!1 &1963730424
 GameObject:
   m_ObjectHideFlags: 0
