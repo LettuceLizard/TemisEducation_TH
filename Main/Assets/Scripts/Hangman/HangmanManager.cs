@@ -92,12 +92,12 @@ public class HangmanManager : MonoBehaviour
 
         if (wordFound)
         {
+            GameObject.Find("Hangman" + n).GetComponent<Image>().enabled = true;
             n++;
         }
 
         else if (!wordFound)
         {
-            GameObject.Find("Hangman" + j).GetComponent<Image>().enabled = false;
             j++;
         }
 
