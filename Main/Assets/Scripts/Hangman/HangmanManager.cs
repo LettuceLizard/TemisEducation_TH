@@ -1,24 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
-//---------------------------------------------------//
-//-------------Använd en dubbel for-loop-------------//
-//---------------------------------------------------//
+
 public class HangmanManager : MonoBehaviour
 {
-    public string wordToGuess;
-    private int lengthOfWordToGuess;
-    private GameObject center;
-    public GameObject pad;
-    Vector3 newPosition;
+    private int truelength;
+    private int n = 0;
+    private int j = 0;
     private int nbletters;
     private char letterPressedAsChar;
-    int n = 0;
-    int j = 0;
-    bool wordFound;
-    int truelength;
-    List<char> word = new List<char>();
-    int temp;
+    private bool wordFound;
+    private bool found;
+    public string wordToGuess;
+    Vector3 newPosition;
+    private GameObject center;
+    public GameObject pad;
 
     void Start()
     {
@@ -29,24 +24,36 @@ public class HangmanManager : MonoBehaviour
 
     void SetupGame()
     {
-        lengthOfWordToGuess = wordToGuess.Length;
         wordToGuess = wordToGuess.ToUpper();
+        char[] word = new char [wordToGuess.Length];
 
-        for (int i = 0; i < lengthOfWordToGuess; i++)
+        for (int i = 0; i < wordToGuess.Length; i++)
         {
-            word.Add(wordToGuess[i]);               
-            Debug.Log(word.Count);
-            Debug.Log(word[i]);
-            //for (int k = 0; k < lengthOfWordToGuess; k++)
-            //{
-                
-            //}
+            found = false;
+
+            if (wordToGuess[i] == ' ')
+            {
+                i++;
+            }
+
+            for (int k = 0; k < wordToGuess.Length; k++)
+            {
+                if (word[k] == wordToGuess[i])
+                {
+                    found = true;
+                }
+            }
+
+            if (!found)
+            {
+                word.SetValue(wordToGuess[i], i);              
+            }
         }
     }
 
     void SetupLayout()
     {
-        nbletters = lengthOfWordToGuess;
+        nbletters = wordToGuess.Length;
  
         for (int i = 0; i < nbletters; i++) 
         {
@@ -69,7 +76,7 @@ public class HangmanManager : MonoBehaviour
         FindObjectOfType<ButtonHiding>().HideButton();
         letterPressedAsChar = System.Convert.ToChar(letterPressedAsInt);
 
-        for (int i=0; i < lengthOfWordToGuess; i++)
+        for (int i=0; i < wordToGuess.Length; i++)
         {
             letterPressedAsChar = System.Char.ToUpper(letterPressedAsChar);
             if (wordToGuess[i] == letterPressedAsChar)
