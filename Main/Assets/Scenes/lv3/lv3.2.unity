@@ -447,8 +447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b9504d4709de64787c7f8a45520652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 0}
-  textDisplay: {fileID: 0}
+  inputField: {fileID: 1421023056}
+  textDisplay: {fileID: 2074497079}
 --- !u!1 &328396235
 GameObject:
   m_ObjectHideFlags: 0
