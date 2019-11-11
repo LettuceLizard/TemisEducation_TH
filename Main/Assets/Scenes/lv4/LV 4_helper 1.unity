@@ -187,42 +187,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.lineCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.wordCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.lineCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
@@ -383,7 +383,6 @@ GameObject:
   m_Component:
   - component: {fileID: 842075486}
   - component: {fileID: 842075487}
-  - component: {fileID: 842075488}
   m_Layer: 5
   m_Name: Video Player
   m_TagString: Untagged
@@ -442,18 +441,6 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
---- !u!114 &842075488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842075485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f2a6784f6e67d4587e95183ba03c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1110889569
 GameObject:
   m_ObjectHideFlags: 0
