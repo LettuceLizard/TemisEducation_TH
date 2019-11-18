@@ -4,8 +4,9 @@ using UnityEngine.UI;
 public class PlayerInput : MonoBehaviour
 {
     private string playerAnswer;
+    public float timer = 2f;
     public GameObject inputField;
-    public Text textDisplay;
+    public TMPro.TextMeshProUGUI text;
     
     public void Answer(string rightAnswer)
     {
@@ -13,13 +14,18 @@ public class PlayerInput : MonoBehaviour
 
         if(playerAnswer == rightAnswer)
         {
-            textDisplay.text = "Correct answer, good job!";
-            FindObjectOfType<GameManager>().NextLevel();
+            text.text = "Correct answer, good job!";
+            Invoke("NextLevel", timer);
         }
 
         else
         {
-            textDisplay.text = "Wrong answer, try again";
+            text.text = "Wrong answer, try again";
         }
+    }
+
+    void NextLevel()
+    {
+        FindObjectOfType<GameManager>().NextLevel();
     }
 }
