@@ -7,6 +7,16 @@ public class MapScript : MonoBehaviour
     public GameObject blankMap;
     public GameObject halfMap;
     public GameObject fullMap;
+    public GameObject back;
+
+    void Start()
+    {
+    int n = PlayerPrefs.GetInt("backCounter");
+        if (n == 1)
+        {
+            back.SetActive(false);
+        }
+    }
 
     public void Map()
     {

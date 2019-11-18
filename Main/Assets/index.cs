@@ -8,7 +8,7 @@ public class index : MonoBehaviour
 
     void Start()
     {
-        build.text = SceneManager.GetActiveScene().buildIndex.ToString();
+        build.text = "Index = " + SceneManager.GetActiveScene().buildIndex.ToString();
         
     }
 }

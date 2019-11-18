@@ -3,16 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject back;
-    void Start()
-    {
-        int n = PlayerPrefs.GetInt("backCounter");
-        if (n == 1)
-        {
-            back.SetActive(false);
-        }
-    }
-
     public void ContinueGame()
     {
         int load = PlayerPrefs.GetInt("savedLevel");
