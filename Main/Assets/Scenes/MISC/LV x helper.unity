@@ -505,7 +505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "fiskebruden talar om riktningen till n\xE4sta brud"
+  m_Text: "fiskekvinnan ber\xE4ttar att du ska till mistress sen\n"
 --- !u!222 &1360075964
 CanvasRenderer:
   m_ObjectHideFlags: 0

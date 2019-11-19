@@ -703,6 +703,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1934762321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8072319092651560424, guid: 178d214c50be3624492d560a8f30623b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8072319092803155875}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8072319092803155875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -770,16 +782,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8072319094094817877, guid: 178d214c50be3624492d560a8f30623b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8072319094094817876, guid: 178d214c50be3624492d560a8f30623b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 842075487}
+    - target: {fileID: 8072319092651560427, guid: 178d214c50be3624492d560a8f30623b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8072319092651560424, guid: 178d214c50be3624492d560a8f30623b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 13bcc1b01e0a7304c822dd0bdb2cd270,
+        type: 3}
+    - target: {fileID: 8072319092651560425, guid: 178d214c50be3624492d560a8f30623b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 842075487}
     - target: {fileID: 8072319092651560425, guid: 178d214c50be3624492d560a8f30623b,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 842075487}
+      objectReference: {fileID: 1934762321}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 178d214c50be3624492d560a8f30623b, type: 3}
 --- !u!4 &8072319092803155876 stripped
