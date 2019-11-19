@@ -6,7 +6,8 @@ public class PlayerInput : MonoBehaviour
     private string playerAnswer;
     public float timer = 2f;
     public GameObject inputField;
-    public TMPro.TextMeshProUGUI text;
+    //public TMPro.TextMeshProUGUI text;
+    public Text text;
     
     public void Answer(string rightAnswer)
     {
