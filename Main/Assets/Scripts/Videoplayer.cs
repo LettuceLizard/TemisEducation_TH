@@ -14,7 +14,6 @@ public class Videoplayer : MonoBehaviour
     {
         if (!videoPlayer.isPlaying)
         {
-            Debug.Log("Error 2");
             Paused();
         }
     }
@@ -24,7 +23,6 @@ public class Videoplayer : MonoBehaviour
         int paused = PlayerPrefs.GetInt("paused");
         if (paused == 0)
         {
-            Debug.Log("Error 1");
             FindObjectOfType<GameManager>().NextLevel();
         }
     }
