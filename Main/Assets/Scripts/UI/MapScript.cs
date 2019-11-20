@@ -11,7 +11,7 @@ public class MapScript : MonoBehaviour
 
     void Start()
     {
-    int n = PlayerPrefs.GetInt("backCounter");
+        int n = PlayerPrefs.GetInt("backCounter");
         if (n == 1)
         {
             back.SetActive(false);
