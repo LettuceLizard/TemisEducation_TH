@@ -14,6 +14,6 @@ public class DiceNumberTextScript : MonoBehaviour
 
     void Update()
     {
-        text.text = diceNumber.ToString();
+        text.text = "You rolled a " + diceNumber.ToString();
     }
 }
