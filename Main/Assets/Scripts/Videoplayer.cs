@@ -3,16 +3,39 @@ using UnityEngine.Video;
 
 public class Videoplayer : MonoBehaviour
 {
-    public VideoPlayer video;
-    public float length = 10f;
+    public VideoPlayer videoPlayer;
 
     void Start()
     {
-        Invoke("NextScene",length);
+        videoPlayer.Play();
     }
 
-    private void NextScene()
+    void Update()
     {
-        FindObjectOfType<GameManager>().NextLevel();
+        if (!videoPlayer.isPlaying)
+        {
+            Paused();
+        }
+    }
+
+    void Paused()
+    {
+        int paused = PlayerPrefs.GetInt("paused");
+        if (paused == 0)
+        {
+            FindObjectOfType<GameManager>().NextLevel();
+        }
+    }
+
+    public void Stop()
+    {
+        PlayerPrefs.SetInt("paused", 1);
+        videoPlayer.Pause();
+    }
+
+    public void Play()
+    {
+        PlayerPrefs.SetInt("paused", 0);
+        videoPlayer.Play();
     }
 }
