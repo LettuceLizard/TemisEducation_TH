@@ -12,6 +12,9 @@ public class PlayerInput : MonoBehaviour
     public void Answer(string rightAnswer)
     {
         playerAnswer = inputField.GetComponent<Text>().text;
+        
+        playerAnswer = playerAnswer.ToUpper();
+        rightAnswer = rightAnswer.ToUpper();
 
         if(playerAnswer == rightAnswer)
         {
