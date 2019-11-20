@@ -942,7 +942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 2
   inputField: {fileID: 531792475}
-  text: {fileID: 2074497079}
+  text: {fileID: 531792477}
 --- !u!1 &2027900236
 GameObject:
   m_ObjectHideFlags: 0
