@@ -28,14 +28,6 @@ public class GameManager : MonoBehaviour
 
     public void Back()
     {
-        int n = PlayerPrefs.GetInt("backCounter");
-                
-        if (n == 0)
-        {
-            PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex - 1);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        }
-
-        PlayerPrefs.SetInt("backCounter", 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
