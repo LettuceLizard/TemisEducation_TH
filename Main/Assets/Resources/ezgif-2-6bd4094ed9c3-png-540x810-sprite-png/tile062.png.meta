@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 05dfae753dc38e947abec83babdb02be
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5632400137768497345
+    second: tile062_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -108,11 +111,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tile062_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 540
+        height: 810
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6e4ed8a34ae9843912e26c920cff6c
+      internalID: 5632400137768497345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0a55faf97ddc28a40a6154dd954f4a1e
     internalID: 0
     vertices: []
     indices: 
