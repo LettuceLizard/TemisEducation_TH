@@ -293,11 +293,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 514256178}
   - component: {fileID: 514256177}
   - component: {fileID: 514256176}
   m_Layer: 0
   m_Name: Animation
+=======
+  - component: {fileID: 661685916}
+  - component: {fileID: 661685917}
+  m_Layer: 9
+  m_Name: VideoPlayer
+>>>>>>> 6574404348740578e76b7dd84db1f050618b8d16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,8 +390,13 @@ Transform:
   m_LocalPosition: {x: 696, y: 451, z: -647}
   m_LocalScale: {x: 178.77702, y: 178.77702, z: 178.77702}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 0}
   m_RootOrder: 4
+=======
+  m_Father: {fileID: 1896897139}
+  m_RootOrder: 3
+>>>>>>> 6574404348740578e76b7dd84db1f050618b8d16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543433195 stripped
 GameObject:
@@ -436,7 +448,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1896897139}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 5
+>>>>>>> 6574404348740578e76b7dd84db1f050618b8d16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -642,7 +658,11 @@ RectTransform:
   m_LocalScale: {x: 2.2178, y: 2.2178, z: 2.2178}
   m_Children: []
   m_Father: {fileID: 1896897139}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+  m_RootOrder: 4
+>>>>>>> 6574404348740578e76b7dd84db1f050618b8d16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
