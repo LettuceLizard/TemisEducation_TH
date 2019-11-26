@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MapScript : MonoBehaviour
 {
     public int firstMapPiece;
@@ -7,20 +7,10 @@ public class MapScript : MonoBehaviour
     public GameObject blankMap;
     public GameObject halfMap;
     public GameObject fullMap;
-    public GameObject back;
-
-    void Start()
-    {
-        int n = PlayerPrefs.GetInt("backCounter");
-        if (n == 1)
-        {
-            back.SetActive(false);
-        }
-    }
 
     public void Map()
     {
-        int index = PlayerPrefs.GetInt("savedLevel");
+        int index = SceneManager.GetActiveScene().buildIndex;
         
         if (index <= firstMapPiece)
         {
