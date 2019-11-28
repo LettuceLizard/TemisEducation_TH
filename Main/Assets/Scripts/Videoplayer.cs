@@ -5,6 +5,7 @@ public class Videoplayer : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
     public GameManager gameManager;
+    int paused = 0;
 
     void Start()
     {
@@ -22,7 +23,6 @@ public class Videoplayer : MonoBehaviour
 
     void Paused()
     {
-        int paused = 0;
         paused = PlayerPrefs.GetInt("paused");
         if (paused == 0)
         {
