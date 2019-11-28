@@ -22,7 +22,8 @@ public class Videoplayer : MonoBehaviour
 
     void Paused()
     {
-        int paused = PlayerPrefs.GetInt("paused");
+        int paused = 0;
+        paused = PlayerPrefs.GetInt("paused");
         if (paused == 0)
         {
             Debug.Log("is over");
