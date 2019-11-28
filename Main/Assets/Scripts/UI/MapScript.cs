@@ -2,8 +2,8 @@
 using UnityEngine.SceneManagement;
 public class MapScript : MonoBehaviour
 {
-    public int firstMapPiece;
-    public int secondMapPiece;
+    int firstMapPiece = 10;
+    int secondMapPiece = 21;
     public GameObject blankMap;
     public GameObject halfMap;
     public GameObject fullMap;
