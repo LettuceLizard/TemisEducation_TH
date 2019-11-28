@@ -4,6 +4,7 @@ using UnityEngine.Video;
 public class Videoplayer : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class Videoplayer : MonoBehaviour
         if (!videoPlayer.isPlaying)
         {
             Paused();
+            Debug.Log("is paused");
         }
     }
 
@@ -23,7 +25,8 @@ public class Videoplayer : MonoBehaviour
         int paused = PlayerPrefs.GetInt("paused");
         if (paused == 0)
         {
-            FindObjectOfType<GameManager>().NextLevel();
+            Debug.Log("is over");
+            gameManager.NextLevel();
         }
     }
 

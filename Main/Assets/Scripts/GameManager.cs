@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        Debug.Log("is loading");
         PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         PlayerPrefs.SetInt("backCounter", 0);
@@ -23,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void Back()

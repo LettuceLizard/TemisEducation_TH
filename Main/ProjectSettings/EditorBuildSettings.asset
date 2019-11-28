@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/lv2/lv2.2.unity
     guid: c660e654eb8f4c94684303b3a5e3e066
   - enabled: 1
+    path: Assets/Scenes/lv2/LV 2_helper.unity
+    guid: ec12b191bccc86f488b9969a19f96d6c
+  - enabled: 1
     path: Assets/Scenes/MISC/lv-x.unity
     guid: 727990821414b494d8c9951dbc022d2a
   - enabled: 1
@@ -71,7 +74,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lv10/Hangman lv.unity
     guid: 8904b29251721fd4497fc48579afdcd5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/lv10/LV 10.unity
     guid: 9a94d0f6adaecd14cac3095f350e67bf
   - enabled: 1
