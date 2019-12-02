@@ -527,6 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 842075487}
+  gameManager: {fileID: 1187202287}
 --- !u!1 &1110889569
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,6 +594,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1187202287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2903639812902460854, guid: 16397bb64ab1db446bbd74241c96df9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1921176871}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f3108dc2dd7764bbfa59c20d18ecae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1228364773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,6 +1093,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590297768718363030, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590297768718363030, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 880
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590297768718363030, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 880
+      objectReference: {fileID: 0}
+    - target: {fileID: 3590297768718363030, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1820
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d945fd7de6e01e458dc7e74d4e6fd79, type: 3}
