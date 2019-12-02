@@ -527,6 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 842075487}
+  gameManager: {fileID: 0}
 --- !u!1 &1110889569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,27 +1035,27 @@ PrefabInstance:
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 405
+      value: -135
       objectReference: {fileID: 0}
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -879
+      value: 81
       objectReference: {fileID: 0}
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -880
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -1820
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}
@@ -1069,7 +1070,7 @@ PrefabInstance:
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
         type: 3}

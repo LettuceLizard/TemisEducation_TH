@@ -524,6 +524,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590886670}
   m_CullTransparentMesh: 0
+--- !u!1 &672929646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3590297767103608628, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+    type: 3}
+  m_PrefabInstance: {fileID: 3590297767239332032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &682240607 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3590297767647877791, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
@@ -756,6 +762,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1273120000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3590297768639712161, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+    type: 3}
+  m_PrefabInstance: {fileID: 3590297767239332032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421023056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1021,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   build: {fileID: 5174961444533749024}
+--- !u!114 &1585579255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585579250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d649aef1137d9534683027f39e8e6c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blankMap: {fileID: 672929646}
+  halfMap: {fileID: 1273120000}
+  fullMap: {fileID: 1928265418}
 --- !u!1 &1696112975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1109,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696112975}
   m_CullTransparentMesh: 0
+--- !u!1 &1928265418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3590297768718363029, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+    type: 3}
+  m_PrefabInstance: {fileID: 3590297767239332032}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2074497077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1585579255}
+    - target: {fileID: 3590297767647877792, guid: 3d945fd7de6e01e458dc7e74d4e6fd79,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Map
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d945fd7de6e01e458dc7e74d4e6fd79, type: 3}
