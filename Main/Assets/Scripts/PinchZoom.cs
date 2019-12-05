@@ -3,7 +3,7 @@
  public class PinchZoom : MonoBehaviour
  {
      public Canvas canvas; // The canvas
-     public float zoomSpeed = 0.5f;        // The rate of change of the canvas scale factor
+     public float zoomSpeed = 0.1f;        // The rate of change of the canvas scale factor
      
      void Update()
      {
