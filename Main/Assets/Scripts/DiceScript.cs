@@ -15,7 +15,7 @@ public class DiceScript : MonoBehaviour
     {
         diceVelocity = rb.velocity;
 
-        if (Input.GetKeyDown (KeyCode.Mouse0))
+        if (Input.touchCount > 0)
         {
             DiceNumberTextScript.diceNumber = 0;
             float dirX = Random.Range(0, 500);
