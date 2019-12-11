@@ -555,26 +555,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2490433694342558079, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -616,6 +596,26 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3889156676566048667, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3956835509090225733, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
