@@ -1,19 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ZoomAndPanning : MonoBehaviour
 {
     Vector3 touchStart;
+    public Canvas canvas;
     public float zoomOutMin = 1;
     public float zoomOutMax = 8;
 	
 	// Update is called once per frame
 	void Update () 
     {    
+        Debug.Log(canvas.scaleFactor);
+
         if(Input.GetMouseButtonDown(0))
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
+        //if(max)
+        //    if (Min)
+
         if(Input.touchCount == 2)
         {
             Touch touchZero = Input.GetTouch(0);
@@ -28,6 +35,7 @@ public class ZoomAndPanning : MonoBehaviour
             float difference = currentMagnitude - prevMagnitude;
 
             zoom(difference * 0.01f);
+            //canvas.scaleFactor -= difference * 0.01f;
         }
         
         else if(Input.GetMouseButton(0))
@@ -37,10 +45,11 @@ public class ZoomAndPanning : MonoBehaviour
         }
 
         zoom(Input.GetAxis("Mouse ScrollWheel"));
+        //canvas.scaleFactor += Input.GetAxis("Mouse ScrollWheel");
 	}
 
     void zoom(float increment)
     {
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
+        canvas.scaleFactor = Mathf.Clamp(canvas.scaleFactor - increment, zoomOutMin, zoomOutMax);
     }
 }
