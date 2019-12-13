@@ -4,3 +4,4 @@
 *fixa bilden/skaffa ny bild för svanen
 	möjligtvis plattan med text vid statyn nära svanen
 *fixa bilden/skaffa ny bild för gambler/spelemännen
+*goelocation för kyrkogården
