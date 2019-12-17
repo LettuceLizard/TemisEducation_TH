@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 4775433058383184849}
   - component: {fileID: 4775433058383184854}
   m_Layer: 0
-  m_Name: Text
+  m_Name: TreasureButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
