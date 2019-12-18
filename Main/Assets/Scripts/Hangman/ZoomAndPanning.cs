@@ -7,8 +7,8 @@ public class ZoomAndPanning : MonoBehaviour
 {
     Vector3 touchStart;
     public Canvas canvas;
-    public float zoomOutMin = 1;
-    public float zoomOutMax = 8;
+    public float zoomOutMin = -1000;
+    public float zoomOutMax = 1000;
 	
 	// Update is called once per frame
 	void Update () 
