@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour
     public GameObject inputField;
     //public TMPro.TextMeshProUGUI text;
     public Text text;
+    public GameObject victory;
     
     public void Answer(string rightAnswer)
     {
@@ -18,7 +19,8 @@ public class PlayerInput : MonoBehaviour
 
         if(playerAnswer == rightAnswer)
         {
-            text.text = "Correct answer, good job!";
+            victory.SetActive(true);
+            //text.text = "Correct answer, good job!";
             Invoke("NextLevel", timer);
         }
 
@@ -26,6 +28,7 @@ public class PlayerInput : MonoBehaviour
         {
             text.text = "Wrong answer, try again";
         }
+        
     }
 
     void NextLevel()
