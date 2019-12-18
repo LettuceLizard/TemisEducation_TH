@@ -3,30 +3,35 @@ using UnityEngine.UI;
 
 public class HangmanManager : MonoBehaviour
 {
-    private int truelength;
-    private int n = 0;
-    private int j = 0;
-    private int p = 0;
-    public float gameLostTimer = 5f;
-    public float gameWonTimer = 5f;
-    private char letterPressedAsChar;
-    private bool wordFound;
-    private bool found;
-    public string wordToGuess;
-    Vector3 newPosition;
-    private GameObject center;
-    public GameObject pad;
+    private int j = 0;  //temporary integer used in loops
+    private int n = 0;  //temporary integer used in loops
+    private int p = 0;  //temporary integer used in loops
+    private bool found; //temporary boolean used in loops
+    private bool wordFound; //temporary boolean used in loops
 
+    private int truelength; //length of wordToGuess without spaces or duplicate letters if there are any
+    public string wordToGuess;  //the input word to guess
+    private char letterPressedAsChar;   //input letter saved as char instead of as a string
+    Vector3 newPosition;    //stores the positions of the paddles
+    private GameObject center;  //aligns the pads to this center object
+    public GameObject pad;  //reference to the pad to be used
+    public float gameLostTimer = 5f;    //time until ReloadScene() is called
+    public float gameWonTimer = 5f; //time until NextLevel() is called
+    
+    //runs the setup methods when scene is loaded
     void Start()
     {
-        center = GameObject.Find("centerOfScreen");
+        center = GameObject.Find("centerOfScreen"); //finds the game object named "centerofscreen" to align the new paddles to it later
+        
+        //runs the setup methods
         SetupGame();
         SetupLayout();
     }
 
+    //finds the true length of the input word/words
     void SetupGame()
     {
-        wordToGuess = wordToGuess.ToUpper();
+        wordToGuess = wordToGuess.ToUpper();    //converts all letters to upper case letters
         char[] word = new char [wordToGuess.Length];
 
         for (int i = 0; i < wordToGuess.Length; i++)
@@ -56,27 +61,30 @@ public class HangmanManager : MonoBehaviour
         truelength = word.Length - p;
     }
 
+    //sets up the layout of the paddles
     void SetupLayout()
     { 
         for (int i = 0; i < wordToGuess.Length; i++) 
         {
+            //for each letter it finds it builds a paddle and aligns it to the centerofscreen object
             newPosition = new Vector3 (center.transform.position.x + (((i-wordToGuess.Length/2.0f) *75)), center.transform.position.y, center.transform.position.z);
             GameObject l = (GameObject)Instantiate (pad, newPosition, Quaternion.identity);
             l.name = "letter" + (i + 1);
             l.transform.SetParent(GameObject.Find ("word").transform);
 
-            if (wordToGuess[i] == ' ')
+            if (wordToGuess[i] == ' ')  //if there's a space is hides the paddle representing the space
             {
                 GameObject.Find("letter" + (i + 1)).SetActive(false);
             }
         }
     }
 
-    public void Input(int letterPressedAsInt)
+    //checks the players input for matches in the word to guess and, if the input matches a letter, exchanges the paddle in the right place for the letter
+    public void Input(int letterPressedAsInt)   //takes in the letter pressed as an integer
     {
         wordFound = false;
-        PlayerPrefs.SetInt("buttonIndex", letterPressedAsInt);
-        FindObjectOfType<ButtonHiding>().HideButton();
+        PlayerPrefs.SetInt("buttonIndex", letterPressedAsInt);  //sets the letter pressed as an integer
+        FindObjectOfType<ButtonHiding>().HideButton();  //calls the HideButton() method in the ButtonHiding script
         letterPressedAsChar = System.Convert.ToChar(letterPressedAsInt);
 
         for (int i=0; i < wordToGuess.Length; i++)
@@ -90,7 +98,7 @@ public class HangmanManager : MonoBehaviour
             }
         }
 
-        if (wordFound)
+        if (wordFound)  //hides/shows the hangman
         {
             GameObject.Find("Hangman" + n).GetComponent<Image>().enabled = true;
             n++;
@@ -114,10 +122,13 @@ public class HangmanManager : MonoBehaviour
         }
     }
 
+    //reloads scene, called if player loses
     void ReloadScene()
     {
         FindObjectOfType<GameManager>().ReloadScene();
     }
+
+    //loads next scene, called if player wins
     void NextLevel()
     {
         FindObjectOfType<GameManager>().NextLevel();
