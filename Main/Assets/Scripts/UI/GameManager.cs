@@ -3,29 +3,33 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //lets ypou continue from the scene you stopped playing on
     public void ContinueGame()
     {
         int load = PlayerPrefs.GetInt("savedLevel");
         SceneManager.LoadScene(load);
     }
 
+    //loads te next level after it saves that you completed the current one so that ContinueGame() loads you on the next level
     public void NextLevel()
     {
         PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        PlayerPrefs.SetInt("backCounter", 0);
     }
 
+    //quits the game
     public void QuitGame()
     {
         Application.Quit();
     }
 
+    //loads the current scene
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    //loads the previous scene
     public void Back()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);

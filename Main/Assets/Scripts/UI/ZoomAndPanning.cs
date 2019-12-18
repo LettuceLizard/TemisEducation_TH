@@ -5,22 +5,18 @@ using UnityEngine.UI;
 
 public class ZoomAndPanning : MonoBehaviour
 {
-    Vector3 touchStart;
-    public Canvas canvas;
-    public float zoomOutMin = -1000;
-    public float zoomOutMax = 1000;
+    Vector3 touchStart; 
+    public Canvas canvas;   //reference to canvas
+    public float zoomOutMin = -1000;    //min zoom
+    public float zoomOutMax = 1000; //max zoom
 	
 	// Update is called once per frame
 	void Update () 
     {    
-        //Debug.Log(canvas.scaleFactor);
-
         if(Input.GetMouseButtonDown(0))
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
-        //if(max)
-        //    if (Min)
 
+        //reads two touches and finds the touchdelta and then uses that to zoom in or out
         if(Input.touchCount == 2)
         {
             Touch touchZero = Input.GetTouch(0);
@@ -35,7 +31,6 @@ public class ZoomAndPanning : MonoBehaviour
             float difference = currentMagnitude - prevMagnitude;
 
             zoom(difference * 0.01f);
-            //canvas.scaleFactor -= difference * 0.01f;
         }
         
         else if(Input.GetMouseButton(0))
@@ -45,7 +40,6 @@ public class ZoomAndPanning : MonoBehaviour
         }
 
         zoom(Input.GetAxis("Mouse ScrollWheel"));
-        //canvas.scaleFactor += Input.GetAxis("Mouse ScrollWheel");
 	}
 
     void zoom(float increment)

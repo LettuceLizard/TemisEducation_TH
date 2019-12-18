@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class Continue : MonoBehaviour
 {
     public GameObject start;
     public GameObject cont;
+    public Text text;
 
     void Start()
     {
