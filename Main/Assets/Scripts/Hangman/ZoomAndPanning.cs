@@ -13,7 +13,7 @@ public class ZoomAndPanning : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {    
-        Debug.Log(canvas.scaleFactor);
+        //Debug.Log(canvas.scaleFactor);
 
         if(Input.GetMouseButtonDown(0))
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
