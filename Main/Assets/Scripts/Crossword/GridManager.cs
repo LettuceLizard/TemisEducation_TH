@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
-    /*
+    
     //crossword manager reference
     //preexisting grid with decided words
 
     //check selected box for the input letter*
     //check if selected word is horisontal or not
-    //move selected box to the side or down depending on if current word is vertical or horisontal*
-    */
+    //move selected box to the side or down depending on if current word is vertical or horisontal
+    
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +41,10 @@ public class GridManager : MonoBehaviour
     //moves the selected box either to the side or downwards depending on if the current word is a vertical or a horisontal word
     void BoxMover()
     {
-        //move selected box to the side
-            //check if selected box can move to the side, if not then don't move
-        //move selected box down
-            //check if selected box can move down, if not then don't move
+        //check if selected box can move to the side, if not then don't move
+            //move selected box to the side
+        
+        //check if selected box can move down, if not then don't move
+            //move selected box down
     }
 }

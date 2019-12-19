@@ -28,6 +28,7 @@ public class ZoomAndPanning : MonoBehaviour
             float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
             float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
 
+            //difference is the delta of the two touch points
             float difference = currentMagnitude - prevMagnitude;
 
             zoom(difference * 0.01f);
@@ -39,7 +40,7 @@ public class ZoomAndPanning : MonoBehaviour
             Camera.main.transform.position += direction;
         }
 
-        zoom(Input.GetAxis("Mouse ScrollWheel"));
+        zoom(Input.GetAxis("Mouse ScrollWheel"));   //temporary code that allows us to zoom on the computer
 	}
 
     void zoom(float increment)
