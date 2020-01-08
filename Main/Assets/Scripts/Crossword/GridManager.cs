@@ -15,8 +15,17 @@ public class GridManager : MonoBehaviour
     //move selected box to the side or down depending on if current word is vertical or horisontal
 
     string pLetter;
+    int integer;
+    int deci;
+    double temp;
     public GameObject inputField;
-    bool wordFound;
+    
+    //uneven numbered words are horizontal, even are vertical
+    List<bool> word1 = new List<bool>();
+    List<bool> word2 = new List<bool>();
+    List<bool> word3 = new List<bool>();
+    //List<bool> word4 = new List<bool>();
+    //...
     
     // Start is called before the first frame update
     void Start()
@@ -31,10 +40,8 @@ public class GridManager : MonoBehaviour
     }
 
     //Checks if the box exists and if the player input and the right letter match
-    void BoxCheck(string rLetter, float number)
+    public void BoxCheck(string rLetter, float number)
     {
-        //resets wordfound before the next box is checked
-        wordFound = false;
         //Finds the right box and saves the players input
         inputField = GameObject.Find("Box" + number);
         pLetter = inputField.GetComponent<Text>().text;
@@ -52,7 +59,19 @@ public class GridManager : MonoBehaviour
             {
                 inputField = null;
                 pLetter = null;
-                Invoke("BoxMover", 0);
+                
+                integer = (int) number;
+                temp = (number - integer) * 10;
+                deci = (int) temp;
+                
+                if (integer == 1)
+                    word1.Insert(deci, true);
+                
+                else if (integer == 2)
+                    word2.Insert(deci, true);
+                
+                else if (integer == 3)
+                    word3.Insert(deci, true);
             }
         }
     }
@@ -70,6 +89,31 @@ public class GridManager : MonoBehaviour
         {
             //selects the next box
             inputField.GetComponent<InputField>().Select();
+            inputField = null;
+        }
+    }
+
+    //allows the user to check for errors
+    public void ErrorCheck()
+    {
+        int a = 1;
+        //prints each letter for each word to the debug console
+        foreach (bool value in word1)
+        {
+            Debug.Log("Letter " + a + " in word 1 is: " + value);
+            a++;
+        }
+
+        foreach (bool value in word2)
+        {
+            Debug.Log("Letter " + a + " in word 2 is: " + value);
+            a++;
+        }
+
+        foreach (bool value in word3)
+        {
+            Debug.Log("Letter " + a + " in word 3 is: " + value);
+            a++;
         }
     }
 }
