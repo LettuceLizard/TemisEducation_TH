@@ -5,7 +5,7 @@ public class PlayerInput : MonoBehaviour
 {
     private string playerAnswer;    //reads the players answer through the inputfield
     public float timer = 2f;    //next leveltimer
-    public GameObject inputField;   //reference to said inputfield
+    public GameObject inputField;   //reference to the inputfield
     public Text text;   //reference to the text that displays that you entered the wrong answer
     public GameObject victory;  //the victory image
     
