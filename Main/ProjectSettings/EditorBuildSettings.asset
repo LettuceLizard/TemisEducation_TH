@@ -57,13 +57,13 @@ EditorBuildSettings:
     path: Assets/Scenes/lv6/lv6_storybounty.unity
     guid: c74f490510e8ef64aae70eeb48dd8ba0
   - enabled: 1
-    path: Assets/Scenes/lv7/LV 7.unity
+    path: Assets/lv7/LV 7.unity
     guid: 38db875d2d9ebe148ac8526d697f3572
   - enabled: 1
-    path: Assets/Scenes/lv7/LV 7_help, correct answer.unity
+    path: Assets/lv7/LV 7_help, correct answer.unity
     guid: 489bc5376cfdb7b4993adf2543f751bf
   - enabled: 1
-    path: Assets/Scenes/lv7/LV 7_help, pirate.unity
+    path: Assets/lv7/LV 7_help, pirate.unity
     guid: a7e423010c677ed46b12c9c6a1346f2a
   - enabled: 1
     path: Assets/Scenes/lv8/lv8.unity

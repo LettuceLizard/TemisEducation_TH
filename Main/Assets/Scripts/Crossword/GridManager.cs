@@ -17,7 +17,7 @@ public class GridManager : MonoBehaviour
     string pLetter;
     public GameObject inputField;
     bool wordFound;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +36,10 @@ public class GridManager : MonoBehaviour
         //resets wordfound before the next box is checked
         wordFound = false;
         //Finds the right box and saves the players input
-        pLetter = GameObject.Find("Box" + number).GetComponent<Text>().text;
-        
-        //if it didn't find the box nothing happens
+        inputField = GameObject.Find("Box" + number);
+        pLetter = inputField.GetComponent<Text>().text;
+        PlayerPrefs.SetFloat("number", number);
+        //if it didn't find the box nothing will happen
         if (pLetter != null)
         {
             //Converts both the player input and the right letter to uppercase which eliminates casesensitivity
@@ -49,18 +50,26 @@ public class GridManager : MonoBehaviour
             //If they are the same bool wordFound is set to true
             if (rLetter == pLetter)
             {
-                wordFound = true;
+                inputField = null;
+                pLetter = null;
+                Invoke("BoxMover", 0);
             }
         }
     }
 
-    //moves the selected box either to the side or downwards depending on if the current word is a vertical or a horisontal word
+    //selects the next box of the word
     void BoxMover()
     {
-        //check if selected box can move to the side, if not then don't move
-            //move selected box to the side
-        
-        //check if selected box can move down, if not then don't move
-            //move selected box down
+        //imports the float variable number from the BoxCheck method
+        float number = PlayerPrefs.GetFloat("number") + 0.1f;
+        //tries to find the next box of the same word
+        inputField = GameObject.Find("Box" + number);
+
+        //if it didn't find the box nothing will happen
+        if (inputField != null)
+        {
+            //selects the next box
+            inputField.GetComponent<InputField>().Select();
+        }
     }
 }
