@@ -5,14 +5,18 @@ using UnityEngine.UI;
 
 public class GridManager : MonoBehaviour
 {
-    
+    // \/ what to do \/
+
     //crossword manager reference
     //preexisting grid with decided words
 
-    //check selected box for the input letter*
+    //check selected box for the input letter
     //check if selected word is horisontal or not
     //move selected box to the side or down depending on if current word is vertical or horisontal
-    
+
+    string pLetter;
+    public GameObject inputField;
+    bool wordFound;
 
     // Start is called before the first frame update
     void Start()
@@ -26,16 +30,28 @@ public class GridManager : MonoBehaviour
         
     }
 
-    //check selected box for the input letter
-    void CheckBox()
+    //Checks if the box exists and if the player input and the right letter match
+    void BoxCheck(string rLetter, float number)
     {
-        //check if input letter matches word letter for selected box
-    }
-
-    //check if selected word is horisontal or not
-    void LineCheck()
-    {
-        //check if selected word is horisontal or not
+        //resets wordfound before the next box is checked
+        wordFound = false;
+        //Finds the right box and saves the players input
+        pLetter = GameObject.Find("Box" + number).GetComponent<Text>().text;
+        
+        //if it didn't find the box nothing happens
+        if (pLetter != null)
+        {
+            //Converts both the player input and the right letter to uppercase which eliminates casesensitivity
+            pLetter.ToUpper();
+            rLetter.ToUpper();
+            
+            //Compares player input to the right letter
+            //If they are the same bool wordFound is set to true
+            if (rLetter == pLetter)
+            {
+                wordFound = true;
+            }
+        }
     }
 
     //moves the selected box either to the side or downwards depending on if the current word is a vertical or a horisontal word
