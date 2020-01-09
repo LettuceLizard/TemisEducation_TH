@@ -105,9 +105,7 @@ public class HangmanManager : MonoBehaviour
         }
 
         else if (!wordFound)
-        {
             j++;
-        }
 
         if (j >= 11)
         {

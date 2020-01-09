@@ -1,119 +1,114 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GridManager : MonoBehaviour
 {
-    // \/ what to do \/
-
-    //crossword manager reference
-    //preexisting grid with decided words
-
-    //check selected box for the input letter
-    //check if selected word is horisontal or not
-    //move selected box to the side or down depending on if current word is vertical or horisontal
-
-    string pLetter;
-    int integer;
-    int deci;
-    double temp;
-    public GameObject inputField;
+    string pLetter; //player input
+    int valueWordH; //variable used for math
+    int valueLetterH;   //variable used for math
+    int valueWordV; //variable used for math
+    int valueLetterV;   //variable used for math
+    public Text text;
     
-    //uneven numbered words are horizontal, even are vertical
-    List<bool> word1 = new List<bool>();
-    List<bool> word2 = new List<bool>();
-    List<bool> word3 = new List<bool>();
-    //List<bool> word4 = new List<bool>();
+    //uneven numbered words are horizontal, even numbered words are vertical
+    bool[] word1 = new bool[10];    //word: *enter the word here*
+    bool[] word2 = new bool[10];    //word: *enter the word here*
+    bool[] word3 = new bool[10];    //word: *enter the word here*
+    bool[] word4 = new bool[10];    //word: *enter the word here*
     //...
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    double[] input = new double[2]; //values of the letters positions in both horizontal and vertical words
 
-    // Update is called once per frame
-    void Update()
+    //string rLetter = the right letter for the current box, double input1 is the position of the letter in a horizontal word and double input2 is the same but for vertical words
+    public void BoxCheck(string rLetter, double wordPositionH, double wordPositionV)
     {
-        
-    }
+        //feeds the values given from the inputfield into the input array
+        input.SetValue(wordPositionH, 0);
+        input.SetValue(wordPositionV, 1);
 
-    //Checks if the box exists and if the player input and the right letter match
-    public void BoxCheck(string rLetter, float number)
-    {
-        //Finds the right box and saves the players input
-        inputField = GameObject.Find("Box" + number);
-        pLetter = inputField.GetComponent<Text>().text;
-        PlayerPrefs.SetFloat("number", number);
-        //if it didn't find the box nothing will happen
-        if (pLetter != null)
+        //Converts both the player input and the right letter to uppercase which eliminates casesensitivity
+        pLetter.ToUpper();
+        rLetter.ToUpper();
+
+        //calculates where to input true or false in the bool arrays
+        valueWordH = (int) input.GetValue(0);
+        valueLetterH = ((int) input.GetValue(0) - valueWordH) * 10;
+
+        valueWordV = (int) input.GetValue(0);
+        valueLetterV = ((int) input.GetValue(0) - valueWordV) * 10;
+       
+        //Compares player input (pLetter) to the right letter (rLetter)
+        if (rLetter == pLetter)
         {
-            //Converts both the player input and the right letter to uppercase which eliminates casesensitivity
-            pLetter.ToUpper();
-            rLetter.ToUpper();
+            if (valueWordH == 1)
+                word1.SetValue(true, valueLetterH);
             
-            //Compares player input to the right letter
-            //If they are the same bool wordFound is set to true
-            if (rLetter == pLetter)
-            {
-                inputField = null;
-                pLetter = null;
-                
-                integer = (int) number;
-                temp = (number - integer) * 10;
-                deci = (int) temp;
-                
-                if (integer == 1)
-                    word1.Insert(deci, true);
-                
-                else if (integer == 2)
-                    word2.Insert(deci, true);
-                
-                else if (integer == 3)
-                    word3.Insert(deci, true);
-            }
+            else if (valueWordH == 3)
+                word3.SetValue(true, valueLetterH);
+            
+            if (valueWordV == 2)
+                word2.SetValue(true, valueLetterV);
+            
+            else if (valueWordV == 4)
+                word4.SetValue(true, valueLetterV);
+            
+            //something has gone wrong if this code is run
+            else
+                text.text = "Something has gone wrong if you can se this";
         }
-    }
 
-    //selects the next box of the word
-    void BoxMover()
-    {
-        //imports the float variable number from the BoxCheck method
-        float number = PlayerPrefs.GetFloat("number") + 0.1f;
-        //tries to find the next box of the same word
-        inputField = GameObject.Find("Box" + number);
-
-        //if it didn't find the box nothing will happen
-        if (inputField != null)
+        //if the player didn't input the right letter it saves here
+        else if (rLetter != pLetter)
         {
-            //selects the next box
-            inputField.GetComponent<InputField>().Select();
-            inputField = null;
+            if (valueWordH == 1)
+                word1.SetValue(false, valueLetterH);
+            
+            else if (valueWordH == 3)
+                word3.SetValue(false, valueLetterH);
+            
+            if (valueWordV == 2)
+                word2.SetValue(false, valueLetterV);
+            
+            else if (valueWordV == 4)
+                word4.SetValue(false, valueLetterV);
+            
+            //something has gone wrong if this code is run
+            else
+                text.text = "Something has gone wrong if you can se this";
         }
+
+        //something has gone wrong if this code is run
+        else
+            text.text = "Something has gone wrong if you can se this";
     }
 
     //allows the user to check for errors
     public void ErrorCheck()
     {
-        int a = 1;
-        //prints each letter for each word to the debug console
-        foreach (bool value in word1)
+        //checks each word if all values are true and saves them in a new array ta simplify checking all words for errors at once
+        bool firstWord = (!word1.Contains(false));
+        bool secondWord = (!word2.Contains(false));
+        bool thirdWord = (!word3.Contains(false));
+        bool fourthWord = (!word4.Contains(false));
+        bool[] errors = new bool[4] {firstWord, secondWord, thirdWord , fourthWord};
+
+        //if the array errors contain no false values
+        if (!errors.Contains(false))
         {
-            Debug.Log("Letter " + a + " in word 1 is: " + value);
-            a++;
+            text.text = "Congratolations! all words are entered correct";
+            FindObjectOfType<GameManager>().NextLevel();
         }
 
-        foreach (bool value in word2)
-        {
-            Debug.Log("Letter " + a + " in word 2 is: " + value);
-            a++;
-        }
+        //if the array errors contain no true values
+        else if (!errors.Contains(true))
+            text.text = "All words contains atleast on wrong letter";
 
-        foreach (bool value in word3)
-        {
-            Debug.Log("Letter " + a + " in word 3 is: " + value);
-            a++;
-        }
+        //if the array errors contain both true and false values
+        else if (errors.Contains(false))
+            text.text = "Some, not all, words contain one or more wrong letters";
+        
+        //something has gone wrong if this code is run
+        else
+            text.text = "Something has gone wrong if you can se this";
     }
 }

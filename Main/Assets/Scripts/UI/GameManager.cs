@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
+    float timer = 2.5f;
+    bool loading = false;
     //lets ypou continue from the scene you stopped playing on
     public void ContinueGame()
     {
@@ -13,8 +16,20 @@ public class GameManager : MonoBehaviour
     //loads te next level after it saves that you completed the current one so that ContinueGame() loads you on the next level
     public void NextLevel()
     {
+        if (loading)
+            return;
+        
+        StartCoroutine(LoadNextScene());
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        loading = true;
+        yield return new WaitForSeconds(timer);
+
         PlayerPrefs.SetInt("savedLevel", SceneManager.GetActiveScene().buildIndex + 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        loading = false;
     }
 
     //quits the game

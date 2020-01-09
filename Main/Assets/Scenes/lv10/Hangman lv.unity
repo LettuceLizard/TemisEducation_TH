@@ -4726,7 +4726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129, y: -835}
+  m_AnchoredPosition: {x: 150, y: -839}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980579397
@@ -5912,10 +5912,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b564ab3c9f6e754995c03441d0d5bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameLostTimer: 5
-  gameWonTimer: 3
   wordToGuess: Black fortress
   pad: {fileID: 406924269}
+  gameLostTimer: 5
+  gameWonTimer: 3
 --- !u!114 &1268948390 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2903639812902460854, guid: 16397bb64ab1db446bbd74241c96df9b,
@@ -6416,6 +6416,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775433058804550725, guid: af0e2ff8808012b46ab42692ad50ca0f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -142
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775433058804550725, guid: af0e2ff8808012b46ab42692ad50ca0f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -839
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af0e2ff8808012b46ab42692ad50ca0f, type: 3}
