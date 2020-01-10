@@ -19,13 +19,23 @@ public class GridManager : MonoBehaviour
     //...
     double[] input = new double[2]; //values of the letters positions in both horizontal and vertical words
 
-    //string rLetter = the right letter for the current box, double input1 is the position of the letter in a horizontal word and double input2 is the same but for vertical words
-    public void BoxCheck(string rLetter, double wordPositionH, double wordPositionV)
+    //feeds the values given from the inputfield into the input array
+    public void BoxPositionH(double wordPositionH)
     {
         //feeds the values given from the inputfield into the input array
         input.SetValue(wordPositionH, 0);
-        input.SetValue(wordPositionV, 1);
+    }
 
+    //feeds the values given from the inputfield into the input array
+    public void BoxPositionV(double wordPositionV)
+    {
+        //feeds the values given from the inputfield into the input array
+        input.SetValue(wordPositionV, 0);
+    }
+
+    //string rLetter = the right letter for the current box, double input1 is the position of the letter in a horizontal word and double input2 is the same but for vertical words
+    public void BoxCheck(string rLetter, double wordPositionV)
+    {
         //Converts both the player input and the right letter to uppercase which eliminates casesensitivity
         pLetter.ToUpper();
         rLetter.ToUpper();
