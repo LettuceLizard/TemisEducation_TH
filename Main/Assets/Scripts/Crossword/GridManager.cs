@@ -1,117 +1,151 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
+using UnityEngine.EventSystems;
 
 public class GridManager : MonoBehaviour
 {
     string pLetter; //player input
+    string temp;    //temporary string used for importing of numbers
+    public sbyte amount;  //how many inputfields we have to sort through
     int valueWordH; //variable used for math
     int valueLetterH;   //variable used for math
     int valueWordV; //variable used for math
     int valueLetterV;   //variable used for math
-    public Text text;
-    
+    public Text text;   //the text element that is used to tell the player if there are errors
+
     //uneven numbered words are horizontal, even numbered words are vertical
-    bool[] word1 = new bool[10];    //word: *enter the word here*
-    bool[] word2 = new bool[10];    //word: *enter the word here*
-    bool[] word3 = new bool[10];    //word: *enter the word here*
-    bool[] word4 = new bool[10];    //word: *enter the word here*
+    bool[] word1 = new bool[5];    //the number of spaces in the vector should match the amount of letters in the words
+    string rWord1 = "david";    //no spaces, the code can't handle it yet
+    bool[] word2 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
+    string rWord2 = "";    //no spaces, the code can't handle it yet
+    bool[] word3 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
+    string rWord3 = "";    //no spaces, the code can't handle it yet
+    bool[] word4 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
+    string rWord4 = "";    //no spaces, the code can't handle it yet
     //...
-    double[] input = new double[2]; //values of the letters positions in both horizontal and vertical words
 
-    //feeds the values given from the inputfield into the input array
-    public void BoxPositionH(double wordPositionH)
+    void Start()
     {
-        //feeds the values given from the inputfield into the input array
-        input.SetValue(wordPositionH, 0);
+        rWord1.ToUpper();   //removes capsensitivity
+        rWord2.ToUpper();   //removes capsensitivity
+        rWord3.ToUpper();   //removes capsensitivity
+        rWord4.ToUpper();   //removes capsensitivity
     }
 
-    //feeds the values given from the inputfield into the input array
-    public void BoxPositionV(double wordPositionV)
+    public void BoxCheck(string values) //format of string must follow "ABCD" where A = # of vertical word, B position of letter in vertical word, C = # of horizontal word, D = position of letter in horizontal word
     {
-        //feeds the values given from the inputfield into the input array
-        input.SetValue(wordPositionV, 0);
-    }
-
-    //string rLetter = the right letter for the current box, double input1 is the position of the letter in a horizontal word and double input2 is the same but for vertical words
-    public void BoxCheck(string rLetter, double wordPositionV)
-    {
-        //Converts both the player input and the right letter to uppercase which eliminates casesensitivity
-        pLetter.ToUpper();
-        rLetter.ToUpper();
-
-        //calculates where to input true or false in the bool arrays
-        valueWordH = (int) input.GetValue(0);
-        valueLetterH = ((int) input.GetValue(0) - valueWordH) * 10;
-
-        valueWordV = (int) input.GetValue(0);
-        valueLetterV = ((int) input.GetValue(0) - valueWordV) * 10;
-       
-        //Compares player input (pLetter) to the right letter (rLetter)
-        if (rLetter == pLetter)
+        //reads what object is selected
+        GameObject obj = EventSystem.current.currentSelectedGameObject;
+        
+        //gates the code so it will only run if the selected gameobject is an inputfield
+        if (obj != null && obj.GetComponent<InputField>() != null)
         {
-            if (valueWordH == 1)
-                word1.SetValue(true, valueLetterH);
-            
-            else if (valueWordH == 3)
-                word3.SetValue(true, valueLetterH);
-            
-            if (valueWordV == 2)
-                word2.SetValue(true, valueLetterV);
-            
-            else if (valueWordV == 4)
-                word4.SetValue(true, valueLetterV);
-            
-            //something has gone wrong if this code is run
-            else
-                text.text = "Something has gone wrong if you can se this";
-        }
+            pLetter = obj.GetComponent<InputField>().text;  //reads the players input
+            pLetter.ToUpper();  //removes capsensitivity
 
-        //if the player didn't input the right letter it saves here
-        else if (rLetter != pLetter)
-        {
-            if (valueWordH == 1)
-                word1.SetValue(false, valueLetterH);
-            
-            else if (valueWordH == 3)
-                word3.SetValue(false, valueLetterH);
-            
-            if (valueWordV == 2)
-                word2.SetValue(false, valueLetterV);
-            
-            else if (valueWordV == 4)
-                word4.SetValue(false, valueLetterV);
-            
-            //something has gone wrong if this code is run
-            else
-                text.text = "Something has gone wrong if you can se this";
-        }
+            //feeds the values given from the inputfield into the input array
+            //and calculates where to input true or false in the boolean arrays
+            temp = values.Substring(0, 1);
+            valueWordH = sbyte.Parse(temp);
 
-        //something has gone wrong if this code is run
-        else
-            text.text = "Something has gone wrong if you can se this";
+            temp = values.Substring(1, 1);
+            valueLetterH = sbyte.Parse(temp);
+            
+            //feeds the values given from the inputfield into the input array
+            //and "calculates" where to input true or false in the boolean arrays
+            temp = values.Substring(2, 1);
+            valueWordV = sbyte.Parse(temp);
+
+            temp = values.Substring(3, 1);
+            valueLetterV = sbyte.Parse(temp);
+
+            //if string contains x letter then remove it and add a "true" value to the word
+
+            if (valueWordH == 1)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
+            {
+                Debug.Log("error #1");
+                if (rWord1.Contains(pLetter))   //checks if the word contains the input letter
+                {
+                    Debug.Log("error #2");
+                    word1.SetValue(true, valueLetterH); //sets the value to "true"
+                    //*replace the letter with something else or just remove it*
+                }
+
+                else
+                {
+                    word1.SetValue(false, valueLetterH);    //sets the value to "false"
+                }
+            }
+
+            if (valueWordH == 3)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
+            {
+                if (rWord3.ElementAt(valueLetterH).ToString() == pLetter)   //checks if the word contains the input letter
+                {
+                    word3.SetValue(true, valueLetterH); //sets the value to "true"
+                }
+
+                else
+                {
+                    word3.SetValue(false, valueLetterH);    //sets the value to "false"
+                }
+            }
+            
+            if (valueWordV == 2)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
+            {
+                if (rWord2.ElementAt(valueLetterV).ToString() == pLetter)   //checks if the word contains the input letter
+                {
+                    word2.SetValue(true, valueLetterV); //sets the value to "true"
+                }
+
+                else
+                {
+                    word2.SetValue(false, valueLetterV);    //sets the value to "false"
+                }
+            }
+            
+            if (valueWordV == 4)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
+            {
+                if (rWord4.ElementAt(valueLetterV).ToString() == pLetter)   //checks if the word contains the input letter
+                {   
+                    word4.SetValue(true, valueLetterV); //sets the value to "true"
+                }
+
+                else
+                {
+                    word4.SetValue(false, valueLetterV);    //sets the value to "false"
+                }
+            }
+        }
     }
 
     //allows the user to check for errors
     public void ErrorCheck()
     {
-        //checks each word if all values are true and saves them in a new array ta simplify checking all words for errors at once
+        int i = 1;
+        foreach (bool value in word1)
+        {
+            Debug.Log("value " + i + " is: " + value);
+            i++;
+        }
+        //checks each word if all values are true and saves them in a new array to allow me to check all the words for errors at once
         bool firstWord = (!word1.Contains(false));
         bool secondWord = (!word2.Contains(false));
         bool thirdWord = (!word3.Contains(false));
         bool fourthWord = (!word4.Contains(false));
+        
         bool[] errors = new bool[4] {firstWord, secondWord, thirdWord , fourthWord};
 
         //if the array errors contain no false values
         if (!errors.Contains(false))
         {
-            text.text = "Congratolations! all words are entered correct";
+            text.text = "Congratulations! all words are entered correct";
             FindObjectOfType<GameManager>().NextLevel();
         }
 
         //if the array errors contain no true values
         else if (!errors.Contains(true))
-            text.text = "All words contains atleast on wrong letter";
+            text.text = "All words contains atleast one wrong letter";
 
         //if the array errors contain both true and false values
         else if (errors.Contains(false))
