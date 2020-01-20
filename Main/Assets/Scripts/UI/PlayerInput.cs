@@ -20,7 +20,7 @@ public class PlayerInput : MonoBehaviour
         //if the player answered right it shows the victory image and loads the next scene after x seconds, int timer = x
         if(playerAnswer == rightAnswer)
         {
-            //victory.SetActive(true);
+            victory.SetActive(true);
             Invoke("NextLevel", timer);
         }
         //if the player answers incorrectly it asks the player to try again
