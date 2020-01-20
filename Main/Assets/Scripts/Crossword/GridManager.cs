@@ -7,16 +7,12 @@ public class GridManager : MonoBehaviour
 {
     string pLetter; //player input
     string temp;    //temporary string used for importing of numbers
-    public sbyte amount;  //how many inputfields we have to sort through
-    int valueWordH; //variable used for math
-    int valueLetterH;   //variable used for math
-    int valueWordV; //variable used for math
-    int valueLetterV;   //variable used for math
+    int valueWordH, valueLetterH, valueWordV, valueLetterV; //variables used for math
     public Text text;   //the text element that is used to tell the player if there are errors
 
     //uneven numbered words are horizontal, even numbered words are vertical
     bool[] word1 = new bool[5];    //the number of spaces in the vector should match the amount of letters in the words
-    string rWord1 = "david";    //no spaces, the code can't handle it yet
+    string rWord1 = "";    //no spaces, the code can't handle it yet
     bool[] word2 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
     string rWord2 = "";    //no spaces, the code can't handle it yet
     bool[] word3 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
@@ -27,13 +23,14 @@ public class GridManager : MonoBehaviour
 
     void Start()
     {
-        rWord1.ToUpper();   //removes capsensitivity
-        rWord2.ToUpper();   //removes capsensitivity
-        rWord3.ToUpper();   //removes capsensitivity
-        rWord4.ToUpper();   //removes capsensitivity
+        rWord1 = rWord1.ToUpper();   //removes capsensitivity
+        rWord2 = rWord2.ToUpper();   //removes capsensitivity
+        rWord3 = rWord3.ToUpper();   //removes capsensitivity
+        rWord4 = rWord4.ToUpper();   //removes capsensitivity
+        Debug.Log(rWord1.ElementAt(0));
     }
 
-    public void BoxCheck(string values) //format of string must follow "ABCD" where A = # of vertical word, B position of letter in vertical word, C = # of horizontal word, D = position of letter in horizontal word
+    public void BoxCheck(string values) //format of string must follow "ABCD" where A = # of vertical word, B position of letter in vertical word, C = # of horizontal word, D = position of letter in horizontal word. For example, this is what the third letter of the second words string would look like: "0023"
     {
         //reads what object is selected
         GameObject obj = EventSystem.current.currentSelectedGameObject;
@@ -42,7 +39,7 @@ public class GridManager : MonoBehaviour
         if (obj != null && obj.GetComponent<InputField>() != null)
         {
             pLetter = obj.GetComponent<InputField>().text;  //reads the players input
-            pLetter.ToUpper();  //removes capsensitivity
+            pLetter = pLetter.ToUpper();  //removes capsensitivity
 
             //feeds the values given from the inputfield into the input array
             //and calculates where to input true or false in the boolean arrays
@@ -50,12 +47,12 @@ public class GridManager : MonoBehaviour
             valueWordH = sbyte.Parse(temp);
 
             temp = values.Substring(1, 1);
-            valueLetterH = sbyte.Parse(temp);
+            valueLetterH = sbyte.Parse(temp) - 1;
             
             //feeds the values given from the inputfield into the input array
             //and "calculates" where to input true or false in the boolean arrays
             temp = values.Substring(2, 1);
-            valueWordV = sbyte.Parse(temp);
+            valueWordV = sbyte.Parse(temp) - 1;
 
             temp = values.Substring(3, 1);
             valueLetterV = sbyte.Parse(temp);
@@ -64,23 +61,24 @@ public class GridManager : MonoBehaviour
 
             if (valueWordH == 1)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
-                Debug.Log("error #1");
-                if (rWord1.Contains(pLetter))   //checks if the word contains the input letter
+                Debug.Log("Word found");
+                if (rWord1.ElementAt(valueLetterH) == pLetter.ElementAt(0))  //checks if the word contains the input letter
                 {
-                    Debug.Log("error #2");
+                    Debug.Log("Letter found");
                     word1.SetValue(true, valueLetterH); //sets the value to "true"
-                    //*replace the letter with something else or just remove it*
                 }
 
                 else
                 {
+                    Debug.Log("Error: Input letter not found in array");
                     word1.SetValue(false, valueLetterH);    //sets the value to "false"
+                    
                 }
             }
 
             if (valueWordH == 3)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
-                if (rWord3.ElementAt(valueLetterH).ToString() == pLetter)   //checks if the word contains the input letter
+                if (rWord3.ElementAt(valueLetterH) == pLetter.ElementAt(0))   //checks if the word contains the input letter
                 {
                     word3.SetValue(true, valueLetterH); //sets the value to "true"
                 }
@@ -93,7 +91,7 @@ public class GridManager : MonoBehaviour
             
             if (valueWordV == 2)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
-                if (rWord2.ElementAt(valueLetterV).ToString() == pLetter)   //checks if the word contains the input letter
+                if (rWord2.ElementAt(valueLetterH) == pLetter.ElementAt(0))   //checks if the word contains the input letter
                 {
                     word2.SetValue(true, valueLetterV); //sets the value to "true"
                 }
@@ -106,7 +104,7 @@ public class GridManager : MonoBehaviour
             
             if (valueWordV == 4)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
-                if (rWord4.ElementAt(valueLetterV).ToString() == pLetter)   //checks if the word contains the input letter
+                if (rWord4.ElementAt(valueLetterH) == pLetter.ElementAt(0))   //checks if the word contains the input letter
                 {   
                     word4.SetValue(true, valueLetterV); //sets the value to "true"
                 }
@@ -117,6 +115,8 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
+        else
+            Debug.Log("the selected gameobject was not an inputfield");
     }
 
     //allows the user to check for errors
