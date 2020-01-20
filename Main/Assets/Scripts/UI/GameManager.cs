@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    float timer = 2.5f;
+    public float timer = 2.5f;
     bool loading = false;
     //lets ypou continue from the scene you stopped playing on
     public void ContinueGame()
@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
     {
         if (loading)
             return;
-        
-        StartCoroutine(LoadNextScene());
+        else
+            StartCoroutine(LoadNextScene());
     }
 
     IEnumerator LoadNextScene()

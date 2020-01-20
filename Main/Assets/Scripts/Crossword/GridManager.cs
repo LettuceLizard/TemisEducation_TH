@@ -85,6 +85,7 @@ public class GridManager : MonoBehaviour
 
                 else
                 {
+                    Debug.Log("Error: Input letter not found in array");
                     word3.SetValue(false, valueLetterH);    //sets the value to "false"
                 }
             }
@@ -98,6 +99,7 @@ public class GridManager : MonoBehaviour
 
                 else
                 {
+                    Debug.Log("Error: Input letter not found in array");
                     word2.SetValue(false, valueLetterV);    //sets the value to "false"
                 }
             }
@@ -111,6 +113,7 @@ public class GridManager : MonoBehaviour
 
                 else
                 {
+                    Debug.Log("Error: Input letter not found in array");
                     word4.SetValue(false, valueLetterV);    //sets the value to "false"
                 }
             }
