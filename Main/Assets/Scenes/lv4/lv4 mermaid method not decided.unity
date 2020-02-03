@@ -739,6 +739,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3244998897461290075, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: timer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2182477994576801693, guid: 7ccd8f996c8925f4aaacfe53c40be141,
         type: 3}
       propertyPath: m_AnchoredPosition.x

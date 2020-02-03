@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    public float timer = 2.5f;
+    public float timer = 2f;
     bool loading = false;
     //lets ypou continue from the scene you stopped playing on
     public void ContinueGame()

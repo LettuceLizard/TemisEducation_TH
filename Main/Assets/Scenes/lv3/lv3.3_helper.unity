@@ -1106,5 +1106,10 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2071029678634359911, guid: c9279a88f39448248a554a92bf2cba22,
+        type: 3}
+      propertyPath: timer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9279a88f39448248a554a92bf2cba22, type: 3}

@@ -673,6 +673,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3244998897461290075, guid: 7ccd8f996c8925f4aaacfe53c40be141,
+        type: 3}
+      propertyPath: timer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ccd8f996c8925f4aaacfe53c40be141, type: 3}
 --- !u!224 &624496626 stripped

@@ -1097,6 +1097,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9279a88f39448248a554a92bf2cba22, type: 3}
+--- !u!1 &1303828772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1327934334774713328, guid: c9279a88f39448248a554a92bf2cba22,
+    type: 3}
+  m_PrefabInstance: {fileID: 1303828771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421023056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1274,7 @@ MonoBehaviour:
   timer: 2
   inputField: {fileID: 531792475}
   text: {fileID: 531792477}
-  victory: {fileID: 0}
+  victory: {fileID: 1303828772}
 --- !u!1001 &2034076043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1280,6 +1286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903639812902460854, guid: 16397bb64ab1db446bbd74241c96df9b,
+        type: 3}
+      propertyPath: timer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1531057680360619842, guid: 16397bb64ab1db446bbd74241c96df9b,
         type: 3}
