@@ -1,0 +1,13 @@
+It is 1721 in the year of our lord and the ports in the Canary islands are thriving. We are in what later will be known as the 'Age of Piracy' and the vast ocean is still unconquered territory.
+Europeans powers such as Spain or Britain are waging war on each other with the use of pirates, and so the Oceans have become hostile places full of constant danger.
+One of the main stages in the world of piracy is the Canary Islands, with its strategic location, ships on route both to the west Indies and to Asia have made it a favored stop.
+It also belongs to the Kingdom of Castille, and pirates working with Britain of the Netherlands seek to weaken this kingdom.
+In the morning of the INSERT DATE  1721, the streets of Puerto de la Cruz are hit with a rumour that a pirate, under a different name and flag has been staying of the last week in Tenerife, and that a certain famous ship is waiting for him outside the port.
+What is a pirate doing in Puerto de la Cruz that long? And who is it? Could the rumours of treasure and riches be true?
+
+The first step to a pirate's name is his ship. We need to find out the name of the ship, quick!
+
+	It is said that the cannons on the walls are all named after famous pirate ships, go and see if one of them is named after our captains ship
+
+'<insert name>' is a famous ship in the African coast and in the Caribbean, but who is its captain?
+I think you better check the pirate's registry.
