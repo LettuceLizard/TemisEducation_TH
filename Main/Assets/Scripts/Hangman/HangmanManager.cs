@@ -15,8 +15,11 @@ public class HangmanManager : MonoBehaviour
     Vector3 newPosition;    //stores the positions of the paddles
     private GameObject center;  //aligns the pads to this center object
     public GameObject pad;  //reference to the pad to be used
+    public GameObject underScore;   //reference to the pad to be used
     public float gameLostTimer = 5f;    //time until ReloadScene() is called
     public float gameWonTimer = 5f; //time until NextLevel() is called
+
+    public GameObject victory;  //the victory image
     
     //runs the setup methods when scene is loaded
     void Start()
@@ -67,14 +70,18 @@ public class HangmanManager : MonoBehaviour
         for (int i = 0; i < wordToGuess.Length; i++) 
         {
             //for each letter it finds it builds a paddle and aligns it to the centerofscreen object
-            newPosition = new Vector3 (center.transform.position.x + (((i-wordToGuess.Length/2.0f) *75)), center.transform.position.y, center.transform.position.z);
-            GameObject l = (GameObject)Instantiate (pad, newPosition, Quaternion.identity);
-            l.name = "letter" + (i + 1);
+            newPosition = new Vector3 (center.transform.position.x + (((i-wordToGuess.Length/2.0f) * 5)), center.transform.position.y, center.transform.position.z);
+            GameObject l = (GameObject)Instantiate (underScore, newPosition, Quaternion.identity);
+            l.name = "Lletter" + (i + 1);
             l.transform.SetParent(GameObject.Find ("word").transform);
+            GameObject k = (GameObject)Instantiate (pad, newPosition, Quaternion.identity);
+            k.name = "Kletter" + (i + 1);
+            k.transform.SetParent(GameObject.Find ("word").transform);
+            k.GetComponent<Text>().enabled = false;
 
             if (wordToGuess[i] == ' ')  //if there's a space is hides the paddle representing the space
             {
-                GameObject.Find("letter" + (i + 1)).SetActive(false);
+                GameObject.Find("Lletter" + (i + 1)).SetActive(false);
             }
         }
     }
@@ -93,7 +100,10 @@ public class HangmanManager : MonoBehaviour
 
             if (wordToGuess[i] == letterPressedAsChar)
             {
-                GameObject.Find("letter" + (i + 1)).GetComponent<Text>().text = letterPressedAsChar.ToString();
+                //GameObject.Find("letter" + (i + 1)).GetComponent<Text>().text = letterPressedAsChar.ToString();
+                GameObject.Find("Lletter" + (i + 1)).GetComponent<Image>().enabled = false;
+                GameObject.Find("Kletter" + (i + 1)).GetComponent<Text>().enabled = true;
+                GameObject.Find("Kletter" + (i + 1)).GetComponent<Text>().text = letterPressedAsChar.ToString();
                 wordFound = true;
             }
         }
@@ -115,6 +125,7 @@ public class HangmanManager : MonoBehaviour
 
         else if (n >= truelength)
         {
+            victory.SetActive(true);
             GameObject.Find("GameWon").GetComponent<Text>().enabled = true;
             Invoke("NextLevel", gameWonTimer);
         }
