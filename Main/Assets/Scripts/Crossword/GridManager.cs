@@ -12,21 +12,21 @@ public class GridManager : MonoBehaviour
 
     //uneven numbered words are horizontal, even numbered words are vertical
     bool[] word1 = new bool[5];    //the number of spaces in the vector should match the amount of letters in the words
-    string rWord1 = "";    //no spaces, the code can't handle it yet
-    bool[] word2 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
-    string rWord2 = "";    //no spaces, the code can't handle it yet
-    bool[] word3 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
-    string rWord3 = "";    //no spaces, the code can't handle it yet
-    bool[] word4 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
-    string rWord4 = "";    //no spaces, the code can't handle it yet
+    string rWord1 = "david";    //no spaces, the code can't handle it yet
+    bool[] word2 = new bool[6];    //the number of spaces in the vector should match the amount of letters in the words  *
+    string rWord2 = "ingvar";    //no spaces, the code can't handle it yet
+    //bool[] word3 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
+    //string rWord3 = "";    //no spaces, the code can't handle it yet
+    //bool[] word4 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
+    //string rWord4 = "";    //no spaces, the code can't handle it yet
     //...
 
     void Start()
     {
         rWord1 = rWord1.ToUpper();   //removes capsensitivity
         rWord2 = rWord2.ToUpper();   //removes capsensitivity
-        rWord3 = rWord3.ToUpper();   //removes capsensitivity
-        rWord4 = rWord4.ToUpper();   //removes capsensitivity
+        //rWord3 = rWord3.ToUpper();   //removes capsensitivity
+        //rWord4 = rWord4.ToUpper();   //removes capsensitivity
         Debug.Log(rWord1.ElementAt(0));
     }
 
@@ -52,12 +52,16 @@ public class GridManager : MonoBehaviour
             //feeds the values given from the inputfield into the input array
             //and "calculates" where to input true or false in the boolean arrays
             temp = values.Substring(2, 1);
-            valueWordV = sbyte.Parse(temp) - 1;
+            valueWordV = sbyte.Parse(temp);
+
+            Debug.Log("value of valueWordV is: " + valueWordV);
 
             temp = values.Substring(3, 1);
-            valueLetterV = sbyte.Parse(temp);
+            valueLetterV = sbyte.Parse(temp) - 1;
 
-            //if string contains x letter then remove it and add a "true" value to the word
+            Debug.Log("value of valueLetterV is: " + valueLetterV);
+
+            
 
             if (valueWordH == 1)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
@@ -75,7 +79,7 @@ public class GridManager : MonoBehaviour
                     
                 }
             }
-
+            /*
             if (valueWordH == 3)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
                 if (rWord3.ElementAt(valueLetterH) == pLetter.ElementAt(0))   //checks if the word contains the input letter
@@ -88,11 +92,11 @@ public class GridManager : MonoBehaviour
                     Debug.Log("Error: Input letter not found in array");
                     word3.SetValue(false, valueLetterH);    //sets the value to "false"
                 }
-            }
+            }*/
             
             if (valueWordV == 2)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
-                if (rWord2.ElementAt(valueLetterH) == pLetter.ElementAt(0))   //checks if the word contains the input letter
+                if (rWord2.ElementAt(valueLetterV) == pLetter.ElementAt(0))   //checks if the word contains the input letter
                 {
                     word2.SetValue(true, valueLetterV); //sets the value to "true"
                 }
@@ -103,10 +107,10 @@ public class GridManager : MonoBehaviour
                     word2.SetValue(false, valueLetterV);    //sets the value to "false"
                 }
             }
-            
+            /*
             if (valueWordV == 4)    //checks which word it is, 1 = word 1, 2 = word 2 and so on
             {
-                if (rWord4.ElementAt(valueLetterH) == pLetter.ElementAt(0))   //checks if the word contains the input letter
+                if (rWord4.ElementAt(valueLetterV) == pLetter.ElementAt(0))   //checks if the word contains the input letter
                 {   
                     word4.SetValue(true, valueLetterV); //sets the value to "true"
                 }
@@ -116,7 +120,7 @@ public class GridManager : MonoBehaviour
                     Debug.Log("Error: Input letter not found in array");
                     word4.SetValue(false, valueLetterV);    //sets the value to "false"
                 }
-            }
+            }*/
         }
         else
             Debug.Log("the selected gameobject was not an inputfield");
@@ -128,9 +132,17 @@ public class GridManager : MonoBehaviour
         int i = 1;
         foreach (bool value in word1)
         {
-            Debug.Log("value " + i + " is: " + value);
+            Debug.Log("value " + i + " of word1 is: " + value);
             i++;
         }
+        
+        i = 1;
+        foreach (bool value in word2)
+        {
+            Debug.Log("value " + i + " of word2 is: " + value);
+            i++;
+        }
+        /*
         //checks each word if all values are true and saves them in a new array to allow me to check all the words for errors at once
         bool firstWord = (!word1.Contains(false));
         bool secondWord = (!word2.Contains(false));
@@ -157,5 +169,6 @@ public class GridManager : MonoBehaviour
         //something has gone wrong if this code is run
         else
             text.text = "Something has gone wrong if you can se this";
+        */
     }
 }
