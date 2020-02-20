@@ -734,32 +734,32 @@ PrefabInstance:
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
@@ -771,6 +771,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3972449678875150734, guid: af0e2ff8808012b46ab42692ad50ca0f,
+        type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 514336562}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af0e2ff8808012b46ab42692ad50ca0f, type: 3}
 --- !u!224 &1613689066 stripped
@@ -1011,11 +1016,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Text
       objectReference: {fileID: 0}
-    - target: {fileID: 2071029678634359911, guid: c9279a88f39448248a554a92bf2cba22,
-        type: 3}
-      propertyPath: timer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3816250394958071247, guid: c9279a88f39448248a554a92bf2cba22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1069,6 +1069,11 @@ PrefabInstance:
     - target: {fileID: 3816250394958071247, guid: c9279a88f39448248a554a92bf2cba22,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071029678634359911, guid: c9279a88f39448248a554a92bf2cba22,
+        type: 3}
+      propertyPath: timer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

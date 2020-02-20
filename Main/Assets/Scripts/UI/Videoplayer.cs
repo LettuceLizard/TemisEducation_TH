@@ -20,7 +20,7 @@ public class Videoplayer : MonoBehaviour
         if (!videoPlayer.isPlaying)
         {
             Paused();
-            Debug.Log("is paused");
+            //Debug.Log("is paused");
         }
     }
 
@@ -30,7 +30,7 @@ public class Videoplayer : MonoBehaviour
         paused = PlayerPrefs.GetInt("paused");
         if (paused == 0)    //if paused = 0 the video isn't paused, if it equals 1 it is paused
         {
-            Debug.Log("is over");
+            //Debug.Log("is over");
             gameManager.NextLevel();
         }
     }

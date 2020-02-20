@@ -331,32 +331,32 @@ PrefabInstance:
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4775433058532393708, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
@@ -368,16 +368,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4775433058804550725, guid: af0e2ff8808012b46ab42692ad50ca0f,
+    - target: {fileID: 3972449678875150734, guid: af0e2ff8808012b46ab42692ad50ca0f,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -796
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775433058804550725, guid: af0e2ff8808012b46ab42692ad50ca0f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 440
-      objectReference: {fileID: 0}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 514336562}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af0e2ff8808012b46ab42692ad50ca0f, type: 3}
 --- !u!224 &477793212 stripped
@@ -1011,11 +1006,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Text
       objectReference: {fileID: 0}
-    - target: {fileID: 2071029678634359911, guid: c9279a88f39448248a554a92bf2cba22,
-        type: 3}
-      propertyPath: timer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3816250394958071247, guid: c9279a88f39448248a554a92bf2cba22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1119,6 +1109,11 @@ PrefabInstance:
     - target: {fileID: 2062235792477903698, guid: c9279a88f39448248a554a92bf2cba22,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071029678634359911, guid: c9279a88f39448248a554a92bf2cba22,
+        type: 3}
+      propertyPath: timer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
