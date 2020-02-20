@@ -7,8 +7,8 @@ public class ZoomAndPanning : MonoBehaviour
 {
     Vector3 touchStart; 
     public Canvas canvas;   //reference to canvas
-    public float zoomOutMin = -1000;    //min zoom
-    public float zoomOutMax = 1000; //max zoom
+    public float zoomOutMin = -100f;    //min zoom
+    public float zoomOutMax = 100f; //max zoom
 	
 	// Update is called once per frame
 	void Update () 
@@ -46,5 +46,11 @@ public class ZoomAndPanning : MonoBehaviour
     void zoom(float increment)
     {
         canvas.scaleFactor = Mathf.Clamp(canvas.scaleFactor - increment, zoomOutMin, zoomOutMax);
+        //Debug.Log(canvas.scaleFactor);
+    }
+
+    public void resetZoom()
+    {
+        canvas.scaleFactor = PlayerPrefs.GetFloat("scale");
     }
 }
