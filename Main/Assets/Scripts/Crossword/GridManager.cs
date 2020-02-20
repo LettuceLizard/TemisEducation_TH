@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -27,7 +28,6 @@ public class GridManager : MonoBehaviour
         rWord2 = rWord2.ToUpper();   //removes capsensitivity
         //rWord3 = rWord3.ToUpper();   //removes capsensitivity
         //rWord4 = rWord4.ToUpper();   //removes capsensitivity
-        Debug.Log(rWord1.ElementAt(0));
     }
 
     public void BoxCheck(string values) //format of string must follow "ABCD" where A = # of vertical word, B position of letter in vertical word, C = # of horizontal word, D = position of letter in horizontal word. For example, this is what the third letter of the second words string would look like: "0023"
