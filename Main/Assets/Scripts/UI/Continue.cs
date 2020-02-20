@@ -19,6 +19,6 @@ public class Continue : MonoBehaviour
     public void ResetSave()
     {
         PlayerPrefs.SetInt("savedLevel", 0);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
