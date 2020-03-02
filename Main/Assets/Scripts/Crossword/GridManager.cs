@@ -12,22 +12,22 @@ public class GridManager : MonoBehaviour
     public Text text;   //the text element that is used to tell the player if there are errors
 
     //uneven numbered words are horizontal, even numbered words are vertical
-    bool[] word1 = new bool[5];    //the number of spaces in the vector should match the amount of letters in the words
-    string rWord1 = "david";    //no spaces, the code can't handle it yet
-    bool[] word2 = new bool[6];    //the number of spaces in the vector should match the amount of letters in the words  *
-    string rWord2 = "ingvar";    //no spaces, the code can't handle it yet
-    //bool[] word3 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
-    //string rWord3 = "";    //no spaces, the code can't handle it yet
-    //bool[] word4 = new bool[10];    //the number of spaces in the vector should match the amount of letters in the words  *
-    //string rWord4 = "";    //no spaces, the code can't handle it yet
-    //...
+    bool[] word1 = new bool[6];    //the number of spaces in the vector should match the amount of letters in the words
+    string rWord1 = "jesper";    //no spaces, the code can't handle it yet
+    bool[] word2 = new bool[3];    //the number of spaces in the vector should match the amount of letters in the words
+    string rWord2 = "bob";    //no spaces, the code can't handle it yet
+    bool[] word3 = new bool[4];    //the number of spaces in the vector should match the amount of letters in the words
+    string rWord3 = "emil";    //no spaces, the code can't handle it yet
+    bool[] word4 = new bool[4];    //the number of spaces in the vector should match the amount of letters in the words
+    string rWord4 = "yeet";    //no spaces, the code can't handle it yet
+    // and so on...
 
     void Start()
     {
         rWord1 = rWord1.ToUpper();   //removes capsensitivity
         rWord2 = rWord2.ToUpper();   //removes capsensitivity
-        //rWord3 = rWord3.ToUpper();   //removes capsensitivity
-        //rWord4 = rWord4.ToUpper();   //removes capsensitivity
+        rWord3 = rWord3.ToUpper();   //removes capsensitivity
+        rWord4 = rWord4.ToUpper();   //removes capsensitivity
     }
 
     public void BoxCheck(string values) //format of string must follow "ABCD" where A = # of vertical word, B position of letter in vertical word, C = # of horizontal word, D = position of letter in horizontal word. For example, this is what the third letter of the second words string would look like: "0023"
@@ -129,18 +129,32 @@ public class GridManager : MonoBehaviour
     //allows the user to check for errors
     public void ErrorCheck()
     {
-        int i = 1;
-        foreach (bool value in word1)
+        if (!word1.Contains(false))
         {
-            Debug.Log("value " + i + " of word1 is: " + value);
-            i++;
+            Debug.Log("all letters are right in word1");
+        }
+        else
+        {
+            int i = 1;
+            foreach (bool value in word1)
+            {
+                Debug.Log("value " + i + " of word1 is: " + value);
+                i++;
+            }
         }
         
-        i = 1;
-        foreach (bool value in word2)
+        if (!word2.Contains(false))
         {
-            Debug.Log("value " + i + " of word2 is: " + value);
-            i++;
+            Debug.Log("all letters are right in word2");
+        }
+        else 
+        {
+            int n = 1;
+            foreach (bool value in word2)
+            {
+                Debug.Log("value " + n + " of word2 is: " + value);
+                n++;
+            }
         }
         /*
         //checks each word if all values are true and saves them in a new array to allow me to check all the words for errors at once
